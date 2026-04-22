@@ -1,0 +1,69 @@
+# ─── FOUR-EYES QUALITY GATE ─────────────────────────────────────────────────
+# Runs on every PR targeting main.
+# ALL checks must pass before merge is permitted.
+# Combined with branch protection (require 1 reviewer) this enforces four-eyes.
+
+name: Four-Eyes Quality Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+defaults:
+  run:
+    working-directory: siem-construction
+
+jobs:
+  # ── 1. TypeScript ───────────────────────────────────────────────────────────
+  typecheck:
+    name: TypeScript — Zero Errors
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: siem-construction/package-lock.json
+      - run: npm ci
+      - run: npx tsc --noEmit
+        name: TypeScript strict check
+
+  # ── 2. Lint (Biome) ─────────────────────────────────────────────────────────
+  lint:
+    name: Lint — Biome
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: siem-construction/package-lock.json
+      - run: npm ci
+      - run: npx @biomejs/biome check src/
+        name: Biome lint check
+
+  # ── 3. Next.js Build ────────────────────────────────────────────────────────
+  build:
+    name: Production Build — Must Succeed
+    runs-on: ubuntu-latest
+    needs: [typecheck, lint]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: siem-construction/package-lock.json
+      - run: npm ci
+      - run: npm run build
+        name: Next.js production build
+      - name: Upload build artefact (for Snyk SARIF)
+        uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-build
+          path: siem-construction/.next/
+          retention-days: 1

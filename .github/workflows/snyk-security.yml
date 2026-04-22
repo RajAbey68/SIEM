@@ -1,0 +1,65 @@
+# ─── SNYK SECURITY SCANNING ─────────────────────────────────────────────────
+# Runs on every PR and weekly schedule.
+# Requires SNYK_TOKEN secret in repo settings:
+#   GitHub → Settings → Secrets → Actions → New secret → SNYK_TOKEN
+#   Get token: https://app.snyk.io/account
+
+name: Snyk Security
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    # Weekly scan every Monday 08:00 UTC (09:00 London / 13:30 Colombo)
+    - cron: "0 8 * * 1"
+
+defaults:
+  run:
+    working-directory: siem-construction
+
+jobs:
+  # ── Dependency vulnerability scan ──────────────────────────────────────────
+  snyk-deps:
+    name: Snyk — Dependency Vulnerabilities
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: siem-construction/package-lock.json
+      - run: npm ci
+
+      - name: Run Snyk dependency scan
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --severity-threshold=high --file=siem-construction/package.json
+        continue-on-error: false
+
+  # ── Static code analysis ───────────────────────────────────────────────────
+  snyk-code:
+    name: Snyk — Static Code Analysis (SAST)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Snyk Code scan
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: code test
+          args: --severity-threshold=high siem-construction/src/
+        continue-on-error: true   # SAST in advisory mode for MVP — upgrade to blocking post-launch
+
+      - name: Upload Snyk SARIF to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: snyk.sarif
+        continue-on-error: true
