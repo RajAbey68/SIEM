@@ -1,181 +1,196 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Sustainability", href: "#sustainability" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home",              href: "/" },
+  { label: "About Us",          href: "/about-us" },
+  { label: "Services",          href: "/services" },
+  { label: "Past Projects",     href: "/past-projects" },
+  { label: "CSR & Sustainability", href: "/csr-sustainability" },
+  { label: "Gallery",           href: "/gallery" },
+  { label: "Our Designs",       href: "/our-designs" },
+  { label: "Careers",           href: "/careers" },
+  {
+    label: "News & Updates",
+    href: "/news-updates",
+    children: [
+      { label: "External Links", href: "/news-updates/external-links" },
+    ],
+  },
+  { label: "Contact Us",        href: "/contact-us" },
 ];
 
 export default function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 60);
+    const handler = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
   return (
     <header
       style={{
-        position: "fixed",
+        position: "sticky",
         top: 0,
-        left: 0,
-        right: 0,
         zIndex: 1000,
-        transition: "all 350ms cubic-bezier(0.4, 0, 0.2, 1)",
-        background: scrolled
-          ? "rgba(4, 31, 31, 0.97)"
-          : "transparent",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
-        borderBottom: scrolled
-          ? "1px solid rgba(255,255,255,0.08)"
-          : "none",
+        background: "var(--brand-header-bg)",
+        borderBottom: "1px solid var(--brand-border)",
+        boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.08)" : "none",
+        transition: "box-shadow 250ms ease",
       }}
     >
-      <div
-        className="container-site"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          height: scrolled ? "68px" : "88px",
-          transition: "height 350ms ease",
-        }}
-      >
-        {/* Logo */}
-        <a href="/" style={{ textDecoration: "none" }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
-            <span
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "1.5rem",
-                fontWeight: 700,
-                color: "var(--white)",
-                lineHeight: 1,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              SIEM
-            </span>
-            <span
-              style={{
-                fontFamily: "var(--font-ui)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.25em",
-                color: "var(--terra-400)",
-                textTransform: "uppercase",
-                fontWeight: 500,
-              }}
-            >
-              Construction · Est. 1993
-            </span>
-          </div>
-        </a>
-
-        {/* Desktop Nav */}
-        <nav
-          style={{
-            display: "flex",
-            gap: "2.5rem",
-            alignItems: "center",
-          }}
-          className="hidden-mobile"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              style={{
-                fontFamily: "var(--font-ui)",
-                fontSize: "0.8rem",
-                fontWeight: 500,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "rgba(255,255,255,0.75)",
-                textDecoration: "none",
-                transition: "color 200ms ease",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.color = "var(--teal-300)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.color = "rgba(255,255,255,0.75)")
-              }
-            >
-              {link.label}
-            </a>
-          ))}
-          <a href="#contact" className="btn btn-primary" style={{ padding: "0.6rem 1.4rem" }}>
-            Start a Project
+      {/* Top bar */}
+      <div style={{ background: "var(--brand-footer)", padding: "6px 0" }}>
+        <div className="container-site" style={{ display: "flex", justifyContent: "flex-end" }}>
+          <a
+            href="mailto:info@siem.lk"
+            style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.78rem", fontFamily: "var(--font-ui)", textDecoration: "none", letterSpacing: "0.02em" }}
+          >
+            info@siem.lk
           </a>
+        </div>
+      </div>
+
+      {/* Main nav row */}
+      <div className="container-site" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "68px" }}>
+
+        {/* Logo */}
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 700, color: "var(--brand-heading)", lineHeight: 1, letterSpacing: "-0.01em" }}>
+              SIEM
+            </div>
+            <div style={{ fontFamily: "var(--font-ui)", fontSize: "0.55rem", letterSpacing: "0.2em", color: "var(--brand-teal)", textTransform: "uppercase", fontWeight: 600, marginTop: "1px" }}>
+              Construction · Est. 1993
+            </div>
+          </div>
+        </Link>
+
+        {/* Desktop nav */}
+        <nav style={{ display: "flex", alignItems: "center", gap: "0.15rem" }} className="desktop-nav">
+          {navLinks.map((link) =>
+            link.children ? (
+              <div
+                key={link.href}
+                style={{ position: "relative" }}
+                onMouseEnter={() => setDropdownOpen(true)}
+                onMouseLeave={() => setDropdownOpen(false)}
+              >
+                <Link
+                  href={link.href}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "3px",
+                    padding: "0.5rem 0.7rem",
+                    fontFamily: "var(--font-ui)",
+                    fontSize: "0.78rem",
+                    fontWeight: 500,
+                    color: isActive(link.href) ? "var(--brand-teal)" : "var(--brand-heading)",
+                    textDecoration: "none",
+                    borderBottom: isActive(link.href) ? "2px solid var(--brand-teal)" : "2px solid transparent",
+                    transition: "color 200ms, border-color 200ms",
+                    whiteSpace: "nowrap",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = "var(--brand-teal)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = isActive(link.href) ? "var(--brand-teal)" : "var(--brand-heading)"; }}
+                >
+                  {link.label}
+                  <ChevronDown size={12} />
+                </Link>
+                {dropdownOpen && (
+                  <div style={{ position: "absolute", top: "100%", left: 0, background: "var(--brand-header-bg)", border: "1px solid var(--brand-border)", borderTop: "2px solid var(--brand-teal)", minWidth: "160px", boxShadow: "0 4px 20px rgba(0,0,0,0.1)", zIndex: 100 }}>
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        style={{ display: "block", padding: "0.65rem 1rem", fontFamily: "var(--font-ui)", fontSize: "0.8rem", color: "var(--brand-body)", textDecoration: "none", borderBottom: "1px solid var(--brand-border)", transition: "background 150ms, color 150ms" }}
+                        onMouseEnter={(e) => { e.currentTarget.style.background = "var(--brand-teal-light)"; e.currentTarget.style.color = "var(--brand-teal)"; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--brand-body)"; }}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                style={{
+                  padding: "0.5rem 0.7rem",
+                  fontFamily: "var(--font-ui)",
+                  fontSize: "0.78rem",
+                  fontWeight: 500,
+                  color: isActive(link.href) ? "var(--brand-teal)" : "var(--brand-heading)",
+                  textDecoration: "none",
+                  borderBottom: isActive(link.href) ? "2px solid var(--brand-teal)" : "2px solid transparent",
+                  transition: "color 200ms, border-color 200ms",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = "var(--brand-teal)"; e.currentTarget.style.borderBottomColor = "var(--brand-teal)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = isActive(link.href) ? "var(--brand-teal)" : "var(--brand-heading)"; e.currentTarget.style.borderBottomColor = isActive(link.href) ? "var(--brand-teal)" : "transparent"; }}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile toggle */}
         <button
-          onClick={() => setOpen(!open)}
+          onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
-          style={{
-            background: "none",
-            border: "none",
-            color: "var(--white)",
-            cursor: "pointer",
-            display: "none",
-          }}
-          className="show-mobile"
+          style={{ background: "none", border: "none", cursor: "pointer", color: "var(--brand-heading)", display: "none" }}
+          className="mobile-toggle"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div
-          style={{
-            background: "var(--teal-950)",
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-            padding: "1.5rem var(--section-px)",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.25rem",
-          }}
-        >
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div style={{ background: "var(--brand-header-bg)", borderTop: "1px solid var(--brand-border)", padding: "0.5rem 0" }}>
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              style={{
-                fontFamily: "var(--font-ui)",
-                fontSize: "1rem",
-                color: "rgba(255,255,255,0.85)",
-                textDecoration: "none",
-                fontWeight: 500,
-              }}
-            >
-              {link.label}
-            </a>
+            <div key={link.href}>
+              <Link
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                style={{ display: "block", padding: "0.75rem var(--section-px)", fontFamily: "var(--font-ui)", fontSize: "0.9rem", color: isActive(link.href) ? "var(--brand-teal)" : "var(--brand-heading)", textDecoration: "none", borderLeft: isActive(link.href) ? "3px solid var(--brand-teal)" : "3px solid transparent" }}
+              >
+                {link.label}
+              </Link>
+              {link.children?.map((child) => (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  onClick={() => setMobileOpen(false)}
+                  style={{ display: "block", padding: "0.6rem calc(var(--section-px) + 1rem)", fontFamily: "var(--font-ui)", fontSize: "0.82rem", color: "var(--brand-body)", textDecoration: "none", background: "var(--brand-teal-light)" }}
+                >
+                  — {child.label}
+                </Link>
+              ))}
+            </div>
           ))}
-          <a href="#contact" className="btn btn-primary" style={{ alignSelf: "flex-start" }}>
-            Start a Project
-          </a>
         </div>
       )}
 
       <style>{`
-        @media (max-width: 768px) {
-          .hidden-mobile { display: none !important; }
-          .show-mobile   { display: block !important; }
-        }
-        @media (min-width: 769px) {
-          .show-mobile { display: none !important; }
-        }
+        @media (max-width: 1024px) { .desktop-nav { display: none !important; } .mobile-toggle { display: block !important; } }
+        @media (min-width: 1025px) { .mobile-toggle { display: none !important; } }
       `}</style>
     </header>
   );

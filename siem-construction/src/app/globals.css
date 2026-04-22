@@ -4,6 +4,18 @@
 
 /* ─── SIEM CONSTRUCTION DESIGN SYSTEM ─────────────────────────── */
 :root {
+  /* ── Original siem.lk brand colours (familiar baseline) ── */
+  --brand-teal:       #549f97;  /* primary accent — links, active nav, icons */
+  --brand-teal-dark:  #3d8078;  /* hover state */
+  --brand-teal-light: #e8f5f4;  /* light tint backgrounds */
+  --brand-heading:    #333333;  /* all headings */
+  --brand-body:       #747474;  /* body / paragraph text */
+  --brand-header-bg:  #ffffff;  /* navbar background */
+  --brand-footer:     #363839;  /* footer widget area */
+  --brand-footer-bar: #282a2b;  /* copyright strip */
+  --brand-btn:        #232323;  /* CTA button bg */
+  --brand-border:     #e5e5e5;  /* dividers */
+
   /* Core Palette — Deep Teal + Sri Lankan Earth Tones */
   --teal-950:   #041f1f;
   --teal-900:   #0a3333;
