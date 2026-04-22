@@ -133,9 +133,10 @@ export default function HeroVideoSection() {
               animationDelay: "0.2s",
             }}
           >
-            Established 1993. Re-born 2026. Siem Construction combines three
-            decades of Sri Lankan mastery with BIM-driven Design-Build
-            standards — delivering certainty at scale.
+            Established 1993. Siem Construction is one of Sri Lanka&apos;s premier
+            civil construction firms — committed to delivering quality solutions
+            on time, earning the trust of our clients for over three decades.
+
           </p>
 
           <div
@@ -158,9 +159,10 @@ export default function HeroVideoSection() {
           style={{ display: "flex", flexDirection: "column", gap: "2rem", minWidth: "180px", animationDelay: "0.4s" }}
         >
           {[
-            { value: "33+", label: "Years Operating" },
+            { value: "33+", label: "Years Experience" },
             { value: "200+", label: "Projects Delivered" },
-            { value: "100%", label: "Client Retention" },
+            { value: "1993", label: "Year Founded" },
+
           ].map((stat) => (
             <div key={stat.label} style={{ borderLeft: "2px solid var(--terra-500)", paddingLeft: "1.25rem" }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", fontWeight: 700, color: "var(--white)", lineHeight: 1 }}>

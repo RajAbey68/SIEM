@@ -54,7 +54,7 @@ export default function Home() {
 
           {/* Stats row */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "1px", background: "#ddd", border: "1px solid #ddd", marginBottom: "2rem" }} className="stats-row">
-            {[["1993","Year Founded"],["33+","Years of Experience"],["200+","Projects Completed"],["100%","Client Retention"]].map(([v,l]) => (
+            {[["1993","Year Founded"],["33+","Years of Experience"],["200+","Projects Completed"],["Sri Lanka","Base of Operations"]].map(([v,l]) => (
               <div key={l} style={{ background: "#fff", padding: "1.25rem 1rem", textAlign: "center" }}>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", fontWeight: 700, color: "var(--brand-teal)", lineHeight: 1 }}>{v}</div>
                 <div style={{ fontFamily: "var(--font-ui)", fontSize: "0.68rem", color: "#666", marginTop: "0.3rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>{l}</div>
@@ -87,9 +87,10 @@ export default function Home() {
           </h3>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1rem", marginBottom: "1.5rem" }} className="projects-mini">
             {[
-              { img: "/images/projects/site-01.jpg", title: "Crystal Sands", sub: "Luxury Residential" },
-              { img: "/images/projects/sbi-after.jpg", title: "State Bank of India", sub: "Heritage Renovation" },
-              { img: "/images/projects/site-03.jpg", title: "Orion City", sub: "Data Centre" },
+              { img: "/images/projects/site-01.jpg", title: "Luxury Residential", sub: "Colombo" },
+              { img: "/images/projects/sbi-after.jpg", title: "Bank Renovation", sub: "Heritage · Colombo" },
+              { img: "/images/projects/site-03.jpg", title: "Commercial Development", sub: "Colombo 2" },
+
             ].map((p) => (
               <div key={p.title} style={{ border: "1px solid #e5e5e5", borderRadius: "2px", overflow: "hidden" }}>
                 <div style={{ position: "relative", height: "140px" }}>
