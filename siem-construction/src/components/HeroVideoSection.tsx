@@ -41,7 +41,7 @@ export default function HeroVideoSection() {
           objectFit: "cover",
           opacity: 0.35,
         }}
-        poster="https://siem.lk/wp-content/uploads/2016/05/slider-02.jpg"
+        poster="/images/projects/site-02.jpg"
       >
         {/* Video source — replace with actual footage */}
         <source
