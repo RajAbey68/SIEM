@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
-import PageLayout from "@/components/PageLayout";
+"use client";
 
-export const metadata: Metadata = {
-  title: "External Links | Siem Construction",
-  description: "Useful external resources and industry links from Siem Construction.",
-};
+import PageLayout from "@/components/PageLayout";
 
 const links = [
   { name: "Institute for Construction Training and Development (ICTAD)", url: "https://www.ictad.gov.lk", desc: "Sri Lanka's national construction training authority." },
@@ -20,30 +16,28 @@ export default function ExternalLinks() {
       title="External Links"
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "News & Updates", href: "/news-updates" }, { label: "External Links" }]}
     >
-      <div className="container-site section-pad">
-        <p style={{ color: "var(--brand-body)", fontFamily: "var(--font-ui)", lineHeight: 1.8, marginBottom: "2rem", maxWidth: "640px" }}>
-          A collection of useful external resources and industry links relevant to the construction industry in Sri Lanka and beyond.
-        </p>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          {links.map((link) => (
-            <a
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: "block", padding: "1.25rem 1.5rem", border: "1px solid var(--brand-border)", borderLeft: "3px solid var(--brand-teal)", borderRadius: "3px", textDecoration: "none", transition: "background 200ms, border-color 200ms" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--brand-teal-light)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
-            >
-              <div style={{ fontFamily: "var(--font-ui)", fontWeight: 600, color: "var(--brand-teal)", fontSize: "0.95rem", marginBottom: "0.3rem" }}>
-                {link.name} ↗
-              </div>
-              <div style={{ fontFamily: "var(--font-ui)", fontSize: "0.82rem", color: "var(--brand-body)" }}>
-                {link.desc}
-              </div>
-            </a>
-          ))}
-        </div>
+      <p style={{ color: "var(--brand-body)", fontFamily: "var(--font-ui)", lineHeight: 1.8, marginBottom: "2rem" }}>
+        A collection of useful external resources and industry links relevant to the construction industry in Sri Lanka and beyond.
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+        {links.map((link) => (
+          <a
+            key={link.url}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "block", padding: "1.25rem 1.5rem", border: "1px solid var(--brand-border)", borderLeft: "3px solid var(--brand-teal)", borderRadius: "3px", textDecoration: "none" }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "var(--brand-teal-light)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
+          >
+            <div style={{ fontFamily: "var(--font-ui)", fontWeight: 600, color: "var(--brand-teal)", fontSize: "0.95rem", marginBottom: "0.3rem" }}>
+              {link.name} ↗
+            </div>
+            <div style={{ fontFamily: "var(--font-ui)", fontSize: "0.82rem", color: "var(--brand-body)" }}>
+              {link.desc}
+            </div>
+          </a>
+        ))}
       </div>
     </PageLayout>
   );
