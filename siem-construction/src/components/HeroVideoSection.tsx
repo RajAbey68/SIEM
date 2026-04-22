@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { ArrowDown, Play } from "lucide-react";
 
 export default function HeroVideoSection() {
@@ -26,7 +27,19 @@ export default function HeroVideoSection() {
         alignItems: "center",
       }}
     >
-      {/* Video Background */}
+      {/* Blueprint poster image (shown before/instead of video) */}
+      <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+        <Image
+          src="/images/hero-placeholder-blueprint.png"
+          alt="Siem Construction — architectural blueprint"
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover", opacity: 0.3 }}
+          priority
+        />
+      </div>
+
+      {/* Video overlay — plays on top of poster */}
       <video
         ref={videoRef}
         autoPlay
@@ -40,21 +53,19 @@ export default function HeroVideoSection() {
           height: "100%",
           objectFit: "cover",
           opacity: 0.35,
+          zIndex: 1,
         }}
-        poster="/images/hero-placeholder-blueprint.png"
       >
-        {/* Video source — replace with actual footage */}
-        <source
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
-          type="video/mp4"
-        />
+        {/* TODO: Replace with real site footage — upload to /public/video/hero.mp4 */}
+        <source src="/video/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Gradient Overlays */}
+      {/* Gradient Overlay */}
       <div
         style={{
           position: "absolute",
           inset: 0,
+          zIndex: 2,
           background:
             "linear-gradient(135deg, rgba(4,31,31,0.92) 0%, rgba(13,79,79,0.7) 50%, rgba(139,58,26,0.4) 100%)",
         }}
@@ -68,6 +79,7 @@ export default function HeroVideoSection() {
           top: 0,
           bottom: 0,
           width: "1px",
+          zIndex: 3,
           background:
             "linear-gradient(to bottom, transparent, rgba(255,255,255,0.15) 30%, rgba(255,255,255,0.15) 70%, transparent)",
         }}
@@ -87,7 +99,6 @@ export default function HeroVideoSection() {
         }}
       >
         <div>
-          {/* Eyebrow */}
           <p
             className="eyebrow animate-fade-up"
             style={{ marginBottom: "1.5rem", color: "var(--terra-400)" }}
@@ -95,23 +106,13 @@ export default function HeroVideoSection() {
             Integrated Project Delivery · Sri Lanka
           </p>
 
-          {/* Main Heading */}
           <h1
             className="display-xl animate-fade-up"
-            style={{
-              color: "var(--white)",
-              marginBottom: "1.5rem",
-              animationDelay: "0.1s",
-            }}
+            style={{ color: "var(--white)", marginBottom: "1.5rem", animationDelay: "0.1s" }}
           >
             We Built
             <br />
-            <span
-              style={{
-                color: "transparent",
-                WebkitTextStroke: "1px rgba(255,255,255,0.4)",
-              }}
-            >
+            <span style={{ color: "transparent", WebkitTextStroke: "1px rgba(255,255,255,0.4)" }}>
               Sri Lanka.
             </span>
             <br />
@@ -120,7 +121,6 @@ export default function HeroVideoSection() {
             Build the Future.
           </h1>
 
-          {/* Subtext */}
           <p
             className="animate-fade-up"
             style={{
@@ -138,15 +138,9 @@ export default function HeroVideoSection() {
             standards — delivering certainty at scale.
           </p>
 
-          {/* CTAs */}
           <div
             className="animate-fade-up"
-            style={{
-              display: "flex",
-              gap: "1rem",
-              flexWrap: "wrap",
-              animationDelay: "0.3s",
-            }}
+            style={{ display: "flex", gap: "1rem", flexWrap: "wrap", animationDelay: "0.3s" }}
           >
             <a href="#projects" className="btn btn-primary">
               <Play size={14} />
@@ -158,50 +152,21 @@ export default function HeroVideoSection() {
           </div>
         </div>
 
-        {/* Stats column */}
+        {/* Stats sidebar */}
         <div
           className="hide-sm animate-fade-up"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "2rem",
-            minWidth: "180px",
-            animationDelay: "0.4s",
-          }}
+          style={{ display: "flex", flexDirection: "column", gap: "2rem", minWidth: "180px", animationDelay: "0.4s" }}
         >
           {[
             { value: "33+", label: "Years Operating" },
             { value: "200+", label: "Projects Delivered" },
             { value: "100%", label: "Client Retention" },
           ].map((stat) => (
-            <div
-              key={stat.label}
-              style={{
-                borderLeft: "2px solid var(--terra-500)",
-                paddingLeft: "1.25rem",
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "2.5rem",
-                  fontWeight: 700,
-                  color: "var(--white)",
-                  lineHeight: 1,
-                }}
-              >
+            <div key={stat.label} style={{ borderLeft: "2px solid var(--terra-500)", paddingLeft: "1.25rem" }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", fontWeight: 700, color: "var(--white)", lineHeight: 1 }}>
                 {stat.value}
               </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-ui)",
-                  fontSize: "0.75rem",
-                  color: "rgba(255,255,255,0.5)",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  marginTop: "0.4rem",
-                }}
-              >
+              <div style={{ fontFamily: "var(--font-ui)", fontSize: "0.75rem", color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: "0.4rem" }}>
                 {stat.label}
               </div>
             </div>
@@ -216,6 +181,7 @@ export default function HeroVideoSection() {
           bottom: "2.5rem",
           left: "50%",
           transform: "translateX(-50%)",
+          zIndex: 10,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -224,14 +190,7 @@ export default function HeroVideoSection() {
           animation: "bounce 2s infinite",
         }}
       >
-        <span
-          style={{
-            fontFamily: "var(--font-ui)",
-            fontSize: "0.65rem",
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-          }}
-        >
+        <span style={{ fontFamily: "var(--font-ui)", fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>
           Scroll
         </span>
         <ArrowDown size={14} />
@@ -242,9 +201,7 @@ export default function HeroVideoSection() {
           0%, 100% { transform: translateX(-50%) translateY(0); }
           50% { transform: translateX(-50%) translateY(8px); }
         }
-        @media (max-width: 768px) {
-          .hide-sm { display: none !important; }
-        }
+        @media (max-width: 768px) { .hide-sm { display: none !important; } }
       `}</style>
     </section>
   );
