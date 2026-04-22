@@ -41,7 +41,7 @@ export default function HeroVideoSection() {
           objectFit: "cover",
           opacity: 0.35,
         }}
-        poster="/images/projects/site-02.jpg"
+        poster="/images/hero-placeholder-blueprint.png"
       >
         {/* Video source — replace with actual footage */}
         <source
