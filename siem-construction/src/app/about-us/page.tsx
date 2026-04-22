@@ -26,7 +26,8 @@ export default function AboutUs() {
               Our corporate philosophy of trust, integrity and quality has placed us at the forefront of the construction industry. Our team demonstrates a thorough understanding of the design process with constant attention to quality and communication.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-              {[["1993","Year Established"],["33+","Years of Experience"],["200+","Projects Completed"],["100%","Client Retention"]].map(([v,l]) => (
+              {[["1993","Year Established"],["33+","Years of Experience"],["200+","Projects Completed"],["LK","Base of Operations"]].map(([v,l]) => (
+
                 <div key={l} style={{ background: "var(--brand-teal-light)", borderLeft: "3px solid var(--brand-teal)", padding: "1rem 1.25rem", borderRadius: "2px" }}>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", fontWeight: 700, color: "var(--brand-teal)", lineHeight: 1 }}>{v}</div>
                   <div style={{ fontFamily: "var(--font-ui)", fontSize: "0.78rem", color: "var(--brand-body)", marginTop: "0.3rem" }}>{l}</div>
