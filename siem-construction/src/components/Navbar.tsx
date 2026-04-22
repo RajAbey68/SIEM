@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
+
 
 const navLinks = [
   { label: "Home",               href: "/" },
@@ -31,29 +33,18 @@ export default function Navbar() {
   return (
     <header style={{ background: "#fff", borderBottom: "1px solid #ddd" }}>
 
-      {/* ── Logo row ─────────────────────────────────────────────── */}
-      <div className="container-site" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px var(--section-px)" }}>
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "12px" }}>
-          {/* Lion logo placeholder — matches the original black shield/lion mark */}
-          <div style={{ width: 52, height: 52, background: "#222", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            <span style={{ color: "#fff", fontSize: "1.3rem" }}>🦁</span>
-          </div>
-          <div>
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "1rem", color: "#222", lineHeight: 1.1, letterSpacing: "0.02em" }}>
-              SIEM CONSTRUCTION (PVT) LTD
-            </div>
-            <div style={{ fontFamily: "var(--font-ui)", fontSize: "0.65rem", color: "#666", letterSpacing: "0.05em", marginTop: "2px" }}>
-              Leading Provider of High Quality Construction Services
-            </div>
-          </div>
+      {/* ── Logo row: actual logo.png from siem.lk ───────────────── */}
+      <div className="container-site" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px var(--section-px)" }}>
+        <Link href="/" style={{ textDecoration: "none", display: "inline-block", lineHeight: 0 }}>
+          <Image
+            src="/images/logo.png"
+            alt="Siem Construction (Pvt) Ltd — Leading Provider of High Quality Construction Services"
+            width={480}
+            height={72}
+            priority
+            style={{ height: "72px", width: "auto", maxWidth: "100%", objectFit: "contain" }}
+          />
         </Link>
-
-        {/* Partner badges (SLAB etc) — right of logo */}
-        <div style={{ display: "flex", gap: "8px", alignItems: "center" }} className="partner-badges">
-          {["SLAB", "ISO", "ICTAD"].map((b) => (
-            <div key={b} style={{ border: "1px solid #ccc", padding: "4px 8px", borderRadius: "3px", fontFamily: "var(--font-ui)", fontSize: "0.62rem", fontWeight: 700, color: "#555", letterSpacing: "0.08em" }}>{b}</div>
-          ))}
-        </div>
 
         {/* Mobile toggle */}
         <button onClick={() => setMobileOpen(!mobileOpen)} style={{ display: "none", background: "none", border: "none", cursor: "pointer" }} className="mobile-toggle">
