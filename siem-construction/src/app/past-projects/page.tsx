@@ -3,8 +3,8 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "Past Projects | Siem Construction",
-  description: "A selection of past construction projects by Siem Construction (Pvt) Ltd across Sri Lanka.",
+  title: "Past Projects | SIEM",
+  description: "A selection of past construction projects by SIEM (Pvt) Ltd across Sri Lanka.",
 };
 
 // ⚠️  Project names are generic pending confirmation from Fawzia/Shanaka.

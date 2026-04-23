@@ -3,16 +3,16 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "Our Designs | Siem Construction",
-  description: "Architectural designs and visualisations from Siem Construction.",
+  title: "Our Designs | SIEM",
+  description: "Architectural designs and visualisations from SIEM.",
 };
 
 const designs = [
-  { src: "/images/gallery/design-1.jpg", title: "Architectural Drawing 1", note: "Siem Construction archive" },
-  { src: "/images/gallery/design-2.jpg", title: "Architectural Drawing 2", note: "Siem Construction archive" },
-  { src: "/images/gallery/design-3.jpg", title: "Architectural Drawing 3", note: "Siem Construction archive" },
-  { src: "/images/gallery/design-4.jpg", title: "Architectural Drawing 4", note: "Siem Construction archive" },
-  { src: "/images/gallery/design-5.jpg", title: "Architectural Drawing 5", note: "Siem Construction archive" },
+  { src: "/images/gallery/design-1.jpg", title: "Architectural Drawing 1", note: "SIEM archive" },
+  { src: "/images/gallery/design-2.jpg", title: "Architectural Drawing 2", note: "SIEM archive" },
+  { src: "/images/gallery/design-3.jpg", title: "Architectural Drawing 3", note: "SIEM archive" },
+  { src: "/images/gallery/design-4.jpg", title: "Architectural Drawing 4", note: "SIEM archive" },
+  { src: "/images/gallery/design-5.jpg", title: "Architectural Drawing 5", note: "SIEM archive" },
   { src: "/images/ai-designs.png", title: "Mixed-Use Development — Colombo", note: "AI Visualisation · Placeholder" },
 ];
 

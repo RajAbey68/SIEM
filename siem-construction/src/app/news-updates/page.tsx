@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "News & Updates | Siem Construction",
-  description: "Latest news and project updates from Siem Construction Sri Lanka.",
+  title: "News & Updates | SIEM",
+  description: "Latest news and project updates from SIEM Sri Lanka.",
 };
 
 export default function NewsUpdates() {

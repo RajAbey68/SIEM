@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import QuickContact from "@/components/QuickContact";
 
-/* ─── Homepage with two-column layout matching siem.lk ─── */
+/* ─── Homepage with two-column layout matching siem-construction.vercel.app ─── */
 export default function Home() {
   return (
     <>
@@ -13,7 +13,7 @@ export default function Home() {
       <div style={{ background: "var(--brand-teal)", padding: "1.5rem 0" }}>
         <div className="container-site">
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0, textTransform: "uppercase", letterSpacing: "0.04em" }}>
-            Welcome to Siem Construction
+            Welcome to SIEM
           </h1>
         </div>
       </div>
@@ -28,7 +28,7 @@ export default function Home() {
           <div style={{ position: "relative", width: "100%", height: "340px", marginBottom: "1.5rem", borderRadius: "2px", overflow: "hidden" }}>
             <Image
               src="/images/projects/site-01.jpg"
-              alt="Siem Construction — quality built for Sri Lanka"
+              alt="SIEM — quality built for Sri Lanka"
               fill
               sizes="(max-width: 768px) 100vw, 65vw"
               style={{ objectFit: "cover" }}
@@ -43,7 +43,7 @@ export default function Home() {
           <div style={{ width: "40px", height: "3px", background: "var(--brand-teal)", marginBottom: "1.25rem" }} />
 
           <p style={{ color: "var(--brand-body)", lineHeight: 1.9, fontSize: "0.9rem", marginBottom: "1rem" }}>
-            Siem Construction is one of Sri Lanka&apos;s premier civil construction firms. We are committed to deliver quality construction solutions on time thus earning the satisfaction of our clients. Our ability to bring together the right combination of experience and expertise in construction is second to none.
+            SIEM is one of Sri Lanka&apos;s premier civil construction firms. We are committed to deliver quality construction solutions on time thus earning the satisfaction of our clients. Our ability to bring together the right combination of experience and expertise in construction is second to none.
           </p>
           <p style={{ color: "var(--brand-body)", lineHeight: 1.9, fontSize: "0.9rem", marginBottom: "1rem" }}>
             Thanks to our all-round engineering experience, we offer a comprehensive service from advisory work to final construction, which satisfies the highest demands in terms of quality, cost-effectiveness and time. Our corporate philosophy of trust, integrity and quality has placed us at the forefront of the construction industry.
@@ -130,7 +130,7 @@ export default function Home() {
               <strong>Tel:</strong> +94 11 4513 327/8<br/>
               <strong>Tel:</strong> +94 11 285 6111<br/>
               <strong>Email:</strong>{" "}
-              <a href="mailto:info@siem.lk" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem.lk</a>
+              <a href="mailto:info@siem-construction.vercel.app" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem-construction.vercel.app</a>
             </p>
           </div>
         </aside>
@@ -149,21 +149,21 @@ export default function Home() {
             <div>
               <h4 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "1rem", marginBottom: "1rem", paddingBottom: "0.5rem", borderBottom: "2px solid var(--brand-teal)" }}>Contact Info</h4>
               <p style={{ color:"rgba(255,255,255,0.6)", fontSize:"0.82rem", fontFamily:"var(--font-ui)", lineHeight:1.9, margin:0 }}>
-                Siem Construction (Pvt) Ltd<br/>113/16, Nawala Road,<br/>Nugegoda, Sri Lanka.<br/><br/>
-                +94 11 4513 327/8<br/>info@siem.lk
+                SIEM (Pvt) Ltd<br/>113/16, Nawala Road,<br/>Nugegoda, Sri Lanka.<br/><br/>
+                +94 11 4513 327/8<br/>info@siem-construction.vercel.app
               </p>
             </div>
             <div>
               <h4 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "1rem", marginBottom: "1rem", paddingBottom: "0.5rem", borderBottom: "2px solid var(--brand-teal)" }}>About Siem</h4>
               <p style={{ color:"rgba(255,255,255,0.6)", fontSize:"0.82rem", fontFamily:"var(--font-ui)", lineHeight:1.9, margin:0 }}>
-                Established in 1993, Siem Construction is one of Sri Lanka&apos;s premier civil construction firms, committed to delivering quality solutions on time.
+                Established in 1993, SIEM is one of Sri Lanka&apos;s premier civil construction firms, committed to delivering quality solutions on time.
               </p>
             </div>
           </div>
         </div>
         <div style={{ background: "var(--brand-footer-bar)", padding: "1rem 0", textAlign:"center" }}>
           <p style={{ color:"rgba(255,255,255,0.4)", fontSize:"0.78rem", fontFamily:"var(--font-ui)", margin:0 }}>
-            Copyright {new Date().getFullYear()} — Siem Construction (Pvt) Ltd · All Rights Reserved
+            Copyright {new Date().getFullYear()} — SIEM (Pvt) Ltd · All Rights Reserved
           </p>
         </div>
       </footer>

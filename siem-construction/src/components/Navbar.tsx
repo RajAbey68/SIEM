@@ -33,12 +33,12 @@ export default function Navbar() {
   return (
     <header style={{ background: "#fff", borderBottom: "1px solid #ddd" }}>
 
-      {/* ── Logo row: actual logo.png from siem.lk ───────────────── */}
+      {/* ── Logo row: actual logo.png from siem-construction.vercel.app ───────────────── */}
       <div className="container-site" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px var(--section-px)" }}>
         <Link href="/" style={{ textDecoration: "none", display: "inline-block", lineHeight: 0 }}>
           <Image
             src="/images/logo.png"
-            alt="Siem Construction (Pvt) Ltd — Leading Provider of High Quality Construction Services"
+            alt="SIEM (Pvt) Ltd — Leading Provider of High Quality Construction Services"
             width={480}
             height={72}
             priority

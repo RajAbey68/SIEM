@@ -3,8 +3,8 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "CSR & Sustainability | Siem Construction",
-  description: "Siem Construction's commitment to corporate social responsibility and sustainable construction in Sri Lanka.",
+  title: "CSR & Sustainability | SIEM",
+  description: "SIEM's commitment to corporate social responsibility and sustainable construction in Sri Lanka.",
 };
 
 export default function CsrSustainability() {
@@ -17,7 +17,7 @@ export default function CsrSustainability() {
               Our Commitment to People &amp; Planet
             </h2>
             <p style={{ color: "var(--brand-body)", lineHeight: 1.9, marginBottom: "1rem" }}>
-              At Siem Construction, we recognise that our responsibility extends beyond the buildings we construct. We are committed to making a positive impact on the communities we serve and the environment we share.
+              At SIEM, we recognise that our responsibility extends beyond the buildings we construct. We are committed to making a positive impact on the communities we serve and the environment we share.
             </p>
 
             {[

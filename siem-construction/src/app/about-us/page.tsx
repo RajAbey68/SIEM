@@ -3,8 +3,8 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "About Us | Siem Construction",
-  description: "Established in 1993, Siem Construction is one of Sri Lanka's premier civil construction firms.",
+  title: "About Us | SIEM",
+  description: "Established in 1993, SIEM is one of Sri Lanka's premier civil construction firms.",
 };
 
 export default function AboutUs() {
@@ -14,10 +14,10 @@ export default function AboutUs() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }} className="about-grid">
           <div>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", color: "var(--brand-heading)", marginBottom: "1.25rem" }}>
-              Welcome to Siem Construction
+              Welcome to SIEM
             </h2>
             <p style={{ color: "var(--brand-body)", lineHeight: 1.9, marginBottom: "1rem" }}>
-              Established in 1993, Siem Construction is one of Sri Lanka&apos;s premier civil construction firms. We are committed to delivering quality construction solutions on time, thus earning the satisfaction of our clients.
+              Established in 1993, SIEM is one of Sri Lanka&apos;s premier civil construction firms. We are committed to delivering quality construction solutions on time, thus earning the satisfaction of our clients.
             </p>
             <p style={{ color: "var(--brand-body)", lineHeight: 1.9, marginBottom: "1rem" }}>
               Our ability to bring together the right combination of experience and expertise in construction is second to none. Thanks to our all-round engineering experience, we offer a comprehensive service from advisory work to final construction.
@@ -36,7 +36,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div style={{ position: "relative", borderRadius: "4px", overflow: "hidden" }}>
-            <Image src="/images/ai-about-team.png" alt="Siem Construction team — AI Visualisation Placeholder" width={600} height={400} style={{ width: "100%", height: "auto", borderRadius: "4px" }} />
+            <Image src="/images/ai-about-team.png" alt="SIEM team — AI Visualisation Placeholder" width={600} height={400} style={{ width: "100%", height: "auto", borderRadius: "4px" }} />
             <div style={{ marginTop: "0.5rem", fontSize: "0.72rem", color: "var(--brand-body)", fontFamily: "var(--font-ui)", textAlign: "center", fontStyle: "italic" }}>
               AI Visualisation · Placeholder image — real team photo to be added
             </div>

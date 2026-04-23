@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "Our Services | Siem Construction",
-  description: "Construction services offered by Siem Construction (Pvt) Ltd — civil construction, renovation, project management and more.",
+  title: "Our Services | SIEM",
+  description: "Construction services offered by SIEM (Pvt) Ltd — civil construction, renovation, project management and more.",
 };
 
 const services = [
@@ -41,7 +41,7 @@ export default function Services() {
       </h2>
       <div style={{ width: "40px", height: "3px", background: "var(--brand-teal)", marginBottom: "1.5rem" }} />
       <p style={{ color: "var(--brand-body)", lineHeight: 1.9, fontSize: "0.9rem", marginBottom: "2rem" }}>
-        Siem Construction offers a comprehensive range of construction services. Our ability to bring together the right combination of experience and expertise is second to none. Thanks to our all-round engineering experience, we offer a complete service from advisory work to final construction.
+        SIEM offers a comprehensive range of construction services. Our ability to bring together the right combination of experience and expertise is second to none. Thanks to our all-round engineering experience, we offer a complete service from advisory work to final construction.
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
         {services.map((s, i) => (

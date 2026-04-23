@@ -48,13 +48,13 @@ export default function StickyContact() {
               +94 11 4513 327
             </a>
             <a
-              href="mailto:info@siem.lk"
+              href="mailto:info@siem-construction.vercel.app"
               style={{ display: "flex", alignItems: "center", gap: "0.75rem", padding: "0.75rem 1rem", background: "rgba(255,255,255,0.08)", borderRadius: "4px", color: "white", textDecoration: "none", fontFamily: "var(--font-ui)", fontSize: "0.85rem", transition: "background 200ms ease" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.15)")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.08)")}
             >
               <MessageSquare size={15} color="var(--teal-300)" />
-              info@siem.lk
+              info@siem-construction.vercel.app
             </a>
             <a href="#contact" className="btn btn-primary" style={{ justifyContent: "center", marginTop: "0.25rem" }} onClick={() => setExpanded(false)}>
               Send a Brief

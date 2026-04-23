@@ -3,8 +3,8 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "Careers | Siem Construction",
-  description: "Join the Siem Construction team. Explore career opportunities in Sri Lanka's leading construction firm.",
+  title: "Careers | SIEM",
+  description: "Join the SIEM team. Explore career opportunities in Sri Lanka's leading construction firm.",
 };
 
 export default function Careers() {
@@ -17,7 +17,7 @@ export default function Careers() {
               Build Your Career With Us
             </h2>
             <p style={{ color: "var(--brand-body)", lineHeight: 1.9, marginBottom: "1rem" }}>
-              At Siem Construction, we believe our people are our greatest asset. We are constantly looking for talented, driven individuals who share our passion for quality construction and engineering excellence.
+              At SIEM, we believe our people are our greatest asset. We are constantly looking for talented, driven individuals who share our passion for quality construction and engineering excellence.
             </p>
             <p style={{ color: "var(--brand-body)", lineHeight: 1.9, marginBottom: "2rem" }}>
               Whether you are a seasoned engineer, a fresh graduate, or an experienced site manager, we offer a dynamic work environment with opportunities for growth and development.
@@ -30,7 +30,7 @@ export default function Careers() {
               </h3>
               <p style={{ color: "var(--brand-body)", fontSize: "0.88rem", lineHeight: 1.8, margin: 0 }}>
                 We are currently updating our vacancies listing. In the meantime, please send your CV to{" "}
-                <a href="mailto:careers@siem.lk" style={{ color: "var(--brand-teal)", fontWeight: 600 }}>careers@siem.lk</a>{" "}
+                <a href="mailto:careers@siem-construction.vercel.app" style={{ color: "var(--brand-teal)", fontWeight: 600 }}>careers@siem-construction.vercel.app</a>{" "}
                 with the role you are interested in.
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function Careers() {
             </div>
           </div>
           <div>
-            <Image src="/images/ai-careers.png" alt="Siem Construction office — AI Visualisation Placeholder" width={600} height={400} style={{ width: "100%", height: "auto", borderRadius: "4px" }} />
+            <Image src="/images/ai-careers.png" alt="SIEM office — AI Visualisation Placeholder" width={600} height={400} style={{ width: "100%", height: "auto", borderRadius: "4px" }} />
             <p style={{ marginTop: "0.5rem", fontSize: "0.72rem", color: "var(--brand-body)", fontFamily: "var(--font-ui)", textAlign: "center", fontStyle: "italic" }}>
               AI Visualisation · Placeholder — real office photo to be added
             </p>

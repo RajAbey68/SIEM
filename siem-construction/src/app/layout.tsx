@@ -26,17 +26,17 @@ const outfit = Outfit({
 
 /* ── SEO metadata — verified copy only ─────────────────────── */
 export const metadata: Metadata = {
-  title: "Siem Construction (Pvt) Ltd | Quality Construction Since 1993",
+  title: "SIEM (Pvt) Ltd | Quality Construction Since 1993",
   description:
-    "Siem Construction is one of Sri Lanka's premier civil construction firms. Established 1993, committed to delivering quality solutions on time. Based in Nugegoda, Colombo.",
+    "SIEM is one of Sri Lanka's premier civil construction firms. Established 1993, committed to delivering quality solutions on time. Based in Nugegoda, Colombo.",
   keywords:
-    "Siem Construction, Sri Lanka construction, civil construction, renovation, Nugegoda, Colombo, construction company",
+    "SIEM, Sri Lanka construction, civil construction, renovation, Nugegoda, Colombo, construction company",
   openGraph: {
-    title: "Siem Construction (Pvt) Ltd | Sri Lanka",
+    title: "SIEM (Pvt) Ltd | Sri Lanka",
     description:
       "Established 1993. One of Sri Lanka's premier civil construction firms — committed to delivering quality solutions on time.",
-    url: "https://siem.lk",
-    siteName: "Siem Construction",
+    url: "https://siem-construction.vercel.app",
+    siteName: "SIEM",
     type: "website",
   },
 };
@@ -45,10 +45,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Siem Construction (Pvt) Ltd",
-  url: "https://siem.lk",
+  name: "SIEM (Pvt) Ltd",
+  url: "https://siem-construction.vercel.app",
   telephone: "+94114513327",
-  email: "info@siem.lk",
+  email: "info@siem-construction.vercel.app",
   address: {
     "@type": "PostalAddress",
     streetAddress: "113/16, Nawala Road",

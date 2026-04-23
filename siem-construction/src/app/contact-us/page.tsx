@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Siem Construction",
-  description: "Get in touch with Siem Construction (Pvt) Ltd — 113/16, Nawala Road, Nugegoda, Sri Lanka.",
+  title: "Contact Us | SIEM",
+  description: "Get in touch with SIEM (Pvt) Ltd — 113/16, Nawala Road, Nugegoda, Sri Lanka.",
 };
 
 export default function ContactUs() {
@@ -20,7 +20,7 @@ export default function ContactUs() {
         <div>
           <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1rem", color: "#333", marginBottom: "1rem", paddingBottom: "0.5rem", borderBottom: "2px solid var(--brand-teal)" }}>Head Office</h3>
           <address style={{ fontStyle: "normal", fontFamily: "var(--font-ui)", fontSize: "0.88rem", color: "var(--brand-body)", lineHeight: 2 }}>
-            Siem Construction (Pvt) Ltd<br />
+            SIEM (Pvt) Ltd<br />
             113/16, Nawala Road<br />
             Nugegoda<br />
             Sri Lanka<br /><br />
@@ -30,7 +30,7 @@ export default function ContactUs() {
             <strong>Tel:</strong>{" "}
             <a href="tel:+94112856111" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>+94 11 285 6111</a><br />
             <strong>Email:</strong>{" "}
-            <a href="mailto:info@siem.lk" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem.lk</a>
+            <a href="mailto:info@siem-construction.vercel.app" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem-construction.vercel.app</a>
           </address>
         </div>
         <div>
@@ -56,7 +56,7 @@ export default function ContactUs() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Siem Construction office location — Nugegoda, Sri Lanka"
+          title="SIEM office location — Nugegoda, Sri Lanka"
         />
       </div>
       <p style={{ fontFamily: "var(--font-ui)", fontSize: "0.75rem", color: "#999", marginTop: "0.5rem", fontStyle: "italic" }}>

@@ -68,21 +68,21 @@ export default function PageLayout({ title, breadcrumbs, children }: PageLayoutP
             <div>
               <h4 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "1rem", marginBottom: "1rem", paddingBottom: "0.5rem", borderBottom: "2px solid var(--brand-teal)" }}>Contact Info</h4>
               <p style={{ color:"rgba(255,255,255,0.6)", fontSize:"0.82rem", fontFamily:"var(--font-ui)", lineHeight:1.9, margin:0 }}>
-                Siem Construction (Pvt) Ltd<br/>113/16, Nawala Road,<br/>Nugegoda, Sri Lanka.<br/><br/>
-                +94 11 4513 327/8<br/>+94 11 285 6111<br/>info@siem.lk
+                SIEM (Pvt) Ltd<br/>113/16, Nawala Road,<br/>Nugegoda, Sri Lanka.<br/><br/>
+                +94 11 4513 327/8<br/>+94 11 285 6111<br/>info@siem-construction.vercel.app
               </p>
             </div>
             <div>
               <h4 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "1rem", marginBottom: "1rem", paddingBottom: "0.5rem", borderBottom: "2px solid var(--brand-teal)" }}>About Siem</h4>
               <p style={{ color:"rgba(255,255,255,0.6)", fontSize:"0.82rem", fontFamily:"var(--font-ui)", lineHeight:1.9, margin:0 }}>
-                Established in 1993, Siem Construction is one of Sri Lanka&apos;s premier civil construction firms, committed to delivering quality solutions on time.
+                Established in 1993, SIEM is one of Sri Lanka&apos;s premier civil construction firms, committed to delivering quality solutions on time.
               </p>
             </div>
           </div>
         </div>
         <div style={{ background: "var(--brand-footer-bar)", padding: "1rem 0", textAlign:"center" }}>
           <p style={{ color:"rgba(255,255,255,0.4)", fontSize:"0.78rem", fontFamily:"var(--font-ui)", margin:0 }}>
-            Copyright {new Date().getFullYear()} — Siem Construction (Pvt) Ltd · All Rights Reserved
+            Copyright {new Date().getFullYear()} — SIEM (Pvt) Ltd · All Rights Reserved
           </p>
         </div>
       </footer>
