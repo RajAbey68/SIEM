@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
 
       {/* Welcome banner */}
-      <div style={{ background: "#1e3a5f", padding: "1.5rem 0" }}>
+      <div style={{ background: "var(--brand-navy)", padding: "1.5rem 0" }}>
         <div className="container-site">
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0, textTransform: "uppercase", letterSpacing: "0.04em" }}>
             Welcome to SIEM
@@ -56,7 +56,7 @@ export default function Home() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "1px", background: "#ddd", border: "1px solid #ddd", marginBottom: "2rem" }} className="stats-row">
             {[["1993","Year Founded"],["33+","Years of Experience"],["200+","Projects Completed"],["Sri Lanka","Base of Operations"]].map(([v,l]) => (
               <div key={l} style={{ background: "#fff", padding: "1.25rem 1rem", textAlign: "center" }}>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", fontWeight: 700, color: "var(--brand-teal)", lineHeight: 1 }}>{v}</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", fontWeight: 700, color: "var(--brand-navy)", lineHeight: 1 }}>{v}</div>
                 <div style={{ fontFamily: "var(--font-ui)", fontSize: "0.68rem", color: "#666", marginTop: "0.3rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>{l}</div>
               </div>
             ))}
@@ -98,12 +98,12 @@ export default function Home() {
                 </div>
                 <div style={{ padding: "0.75rem", borderTop: "2px solid var(--brand-teal)" }}>
                   <p style={{ fontFamily: "var(--font-display)", fontSize: "0.82rem", color: "#333", margin: 0 }}>{p.title}</p>
-                  <p style={{ fontFamily: "var(--font-ui)", fontSize: "0.72rem", color: "var(--brand-teal)", margin: "2px 0 0" }}>{p.sub}</p>
+                  <p style={{ fontFamily: "var(--font-ui)", fontSize: "0.72rem", color: "var(--brand-navy)", margin: "2px 0 0" }}>{p.sub}</p>
                 </div>
               </div>
             ))}
           </div>
-          <Link href="/past-projects" style={{ fontFamily: "var(--font-ui)", fontSize: "0.82rem", fontWeight: 600, color: "var(--brand-teal)", textDecoration: "none" }}>
+          <Link href="/past-projects" style={{ fontFamily: "var(--font-ui)", fontSize: "0.82rem", fontWeight: 600, color: "var(--brand-navy)", textDecoration: "none" }}>
             → View All Past Projects
           </Link>
         </main>
@@ -116,7 +116,7 @@ export default function Home() {
           <div style={{ background: "#fff", border: "1px solid #ddd", borderTop: "3px solid var(--brand-teal)", padding: "1.25rem" }}>
             <h4 style={{ fontFamily: "var(--font-ui)", fontSize: "0.78rem", fontWeight: 700, color: "#333", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 0.75rem" }}>Pages</h4>
             {[["Home","/"],["About Us","/about-us"],["Services","/services"],["Past Projects","/past-projects"],["CSR & Sustainability","/csr-sustainability"],["Gallery","/gallery"],["Careers","/careers"],["News & Updates","/news-updates"],["Contact Us","/contact-us"]].map(([l,h]) => (
-              <Link key={h} href={h} style={{ display:"block", fontFamily:"var(--font-ui)", fontSize:"0.8rem", color:"var(--brand-teal)", textDecoration:"none", padding:"5px 0", borderBottom:"1px solid #f0f0f0" }}>
+              <Link key={h} href={h} style={{ display:"block", fontFamily:"var(--font-ui)", fontSize:"0.8rem", color:"var(--brand-navy)", textDecoration:"none", padding:"5px 0", borderBottom:"1px solid #f0f0f0" }}>
                 › {l}
               </Link>
             ))}
@@ -129,7 +129,7 @@ export default function Home() {
               <strong>Tel:</strong> +94 718 419 419<br/>
               <strong>Tel:</strong> +94 714 429 429<br/>
               <strong>Email:</strong>{" "}
-              <a href="mailto:info@siem.lk" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem.lk</a>
+              <a href="mailto:info@siem.lk" style={{ color: "var(--brand-navy)", textDecoration: "none" }}>info@siem.lk</a>
             </p>
           </div>
         </aside>

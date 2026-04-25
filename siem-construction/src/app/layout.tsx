@@ -28,13 +28,13 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "SIEM (Pvt) Ltd | Sri Lanka",
   description:
-    "SIEM is one of Sri Lanka's premier civil construction firms. Established 1993, committed to delivering quality solutions on time. Based in Nugegoda, Colombo.",
+    "SIEM is one of Sri Lanka's premier civil engineering firms. Established 1993, committed to delivering quality solutions on time. Based in Colombo.",
   keywords:
-    "SIEM, Sri Lanka construction, civil construction, renovation, Nugegoda, Colombo, construction company",
+    "SIEM, Sri Lanka, civil engineering, renovation, Colombo",
   openGraph: {
     title: "SIEM (Pvt) Ltd | Sri Lanka",
     description:
-      "Established 1993. One of Sri Lanka's premier civil construction firms — committed to delivering quality solutions on time.",
+      "Established 1993. One of Sri Lanka's premier civil engineering firms — committed to delivering quality solutions on time.",
     url: "https://siem-construction.vercel.app",
     siteName: "SIEM",
     type: "website",

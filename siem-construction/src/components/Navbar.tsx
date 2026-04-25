@@ -60,14 +60,14 @@ export default function Navbar() {
                 onMouseEnter={() => setDropdownOpen(true)}
                 onMouseLeave={() => setDropdownOpen(false)}
               >
-                <Link href={link.href} style={{ display: "flex", alignItems: "center", gap: "3px", padding: "10px 12px", fontFamily: "var(--font-ui)", fontSize: "0.8rem", fontWeight: isActive(link.href) ? 600 : 400, color: isActive(link.href) ? "var(--brand-teal)" : "#333", textDecoration: "none", borderBottom: isActive(link.href) ? "2px solid var(--brand-teal)" : "2px solid transparent", whiteSpace: "nowrap" }}>
+                <Link href={link.href} style={{ display: "flex", alignItems: "center", gap: "3px", padding: "10px 12px", fontFamily: "var(--font-ui)", fontSize: "0.8rem", fontWeight: isActive(link.href) ? 600 : 400, color: isActive(link.href) ? "var(--brand-navy)" : "#333", textDecoration: "none", borderBottom: isActive(link.href) ? "2px solid var(--brand-navy)" : "2px solid transparent", whiteSpace: "nowrap" }}>
                   {link.label}<ChevronDown size={11} />
                 </Link>
                 {dropdownOpen && (
                   <div style={{ position: "absolute", top: "100%", left: 0, background: "#fff", border: "1px solid #ddd", borderTop: "2px solid var(--brand-teal)", minWidth: "170px", boxShadow: "0 4px 16px rgba(0,0,0,0.1)", zIndex: 200 }}>
                     {link.children.map((c) => (
                       <Link key={c.href} href={c.href} style={{ display: "block", padding: "10px 14px", fontFamily: "var(--font-ui)", fontSize: "0.8rem", color: "#555", textDecoration: "none", borderBottom: "1px solid #f0f0f0" }}
-                        onMouseEnter={(e) => { e.currentTarget.style.background = "#f5fffe"; e.currentTarget.style.color = "var(--brand-teal)"; }}
+                        onMouseEnter={(e) => { e.currentTarget.style.background = "#f0f4f8"; e.currentTarget.style.color = "var(--brand-navy)"; }}
                         onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#555"; }}
                       >{c.label}</Link>
                     ))}
@@ -75,9 +75,9 @@ export default function Navbar() {
                 )}
               </div>
             ) : (
-              <Link key={link.href} href={link.href} style={{ padding: "10px 12px", fontFamily: "var(--font-ui)", fontSize: "0.8rem", fontWeight: isActive(link.href) ? 600 : 400, color: isActive(link.href) ? "var(--brand-teal)" : "#333", textDecoration: "none", borderBottom: isActive(link.href) ? "2px solid var(--brand-teal)" : "2px solid transparent", whiteSpace: "nowrap", display: "block" }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = "var(--brand-teal)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = isActive(link.href) ? "var(--brand-teal)" : "#333"; }}
+              <Link key={link.href} href={link.href} style={{ padding: "10px 12px", fontFamily: "var(--font-ui)", fontSize: "0.8rem", fontWeight: isActive(link.href) ? 600 : 400, color: isActive(link.href) ? "var(--brand-navy)" : "#333", textDecoration: "none", borderBottom: isActive(link.href) ? "2px solid var(--brand-navy)" : "2px solid transparent", whiteSpace: "nowrap", display: "block" }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = "var(--brand-navy)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = isActive(link.href) ? "var(--brand-navy)" : "#333"; }}
               >
                 {link.label}
               </Link>
@@ -91,7 +91,7 @@ export default function Navbar() {
         <div style={{ background: "#fff", borderTop: "1px solid #eee" }}>
           {navLinks.map((link) => (
             <div key={link.href}>
-              <Link href={link.href} onClick={() => setMobileOpen(false)} style={{ display: "block", padding: "12px var(--section-px)", fontFamily: "var(--font-ui)", fontSize: "0.9rem", color: isActive(link.href) ? "var(--brand-teal)" : "#333", textDecoration: "none", borderLeft: isActive(link.href) ? "3px solid var(--brand-teal)" : "3px solid transparent", borderBottom: "1px solid #f0f0f0" }}>
+              <Link href={link.href} onClick={() => setMobileOpen(false)} style={{ display: "block", padding: "12px var(--section-px)", fontFamily: "var(--font-ui)", fontSize: "0.9rem", color: isActive(link.href) ? "var(--brand-navy)" : "#333", textDecoration: "none", borderLeft: isActive(link.href) ? "3px solid var(--brand-navy)" : "3px solid transparent", borderBottom: "1px solid #f0f0f0" }}>
                 {link.label}
               </Link>
               {link.children?.map((c) => (

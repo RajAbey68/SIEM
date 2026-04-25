@@ -12,7 +12,7 @@ export default function PageLayout({ title, breadcrumbs, children }: PageLayoutP
   return (
     <>
       {/* Page title banner */}
-      <div style={{ background: "var(--brand-teal)", padding: "1.5rem 0" }}>
+      <div style={{ background: "var(--brand-navy)", padding: "1.5rem 0" }}>
         <div className="container-site">
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0 }}>
             {title}
@@ -47,7 +47,7 @@ export default function PageLayout({ title, breadcrumbs, children }: PageLayoutP
           <div style={{ background: "#fff", border: "1px solid #ddd", borderTop: "3px solid var(--brand-teal)", padding: "1.25rem" }}>
             <h4 style={{ fontFamily: "var(--font-ui)", fontSize: "0.78rem", fontWeight: 700, color: "#333", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 0.75rem" }}>Pages</h4>
             {[["Home","/"],["About Us","/about-us"],["Services","/services"],["Past Projects","/past-projects"],["CSR & Sustainability","/csr-sustainability"],["Gallery","/gallery"],["Careers","/careers"],["News & Updates","/news-updates"],["Contact Us","/contact-us"]].map(([l,h]) => (
-              <Link key={h} href={h} style={{ display:"block", fontFamily:"var(--font-ui)", fontSize:"0.8rem", color:"var(--brand-teal)", textDecoration:"none", padding:"5px 0", borderBottom:"1px solid #f0f0f0" }}>
+              <Link key={h} href={h} style={{ display:"block", fontFamily:"var(--font-ui)", fontSize:"0.8rem", color:"var(--brand-navy)", textDecoration:"none", padding:"5px 0", borderBottom:"1px solid #f0f0f0" }}>
                 › {l}
               </Link>
             ))}
