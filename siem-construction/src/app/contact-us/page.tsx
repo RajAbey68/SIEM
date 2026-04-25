@@ -3,7 +3,7 @@ import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
   title: "Contact Us | SIEM",
-  description: "Get in touch with SIEM (Pvt) Ltd — 113/16, Nawala Road, Nugegoda, Sri Lanka.",
+  description: "Get in touch with SIEM (Pvt) Ltd — 51/1, Gregory's Road, Colombo 07, Sri Lanka.",
 };
 
 export default function ContactUs() {
@@ -21,16 +21,15 @@ export default function ContactUs() {
           <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1rem", color: "#333", marginBottom: "1rem", paddingBottom: "0.5rem", borderBottom: "2px solid var(--brand-teal)" }}>Head Office</h3>
           <address style={{ fontStyle: "normal", fontFamily: "var(--font-ui)", fontSize: "0.88rem", color: "var(--brand-body)", lineHeight: 2 }}>
             SIEM (Pvt) Ltd<br />
-            113/16, Nawala Road<br />
-            Nugegoda<br />
+            51/1, Gregory&apos;s Road<br />
+            Colombo 07<br />
             Sri Lanka<br /><br />
             <strong>Tel:</strong>{" "}
-            <a href="tel:+94114513327" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>+94 11 4513 327</a> / {" "}
-            <a href="tel:+94114513328" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>328</a><br />
+            <a href="tel:+94718419419" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>+94 718 419 419</a><br />
             <strong>Tel:</strong>{" "}
-            <a href="tel:+94112856111" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>+94 11 285 6111</a><br />
+            <a href="tel:+94714429429" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>+94 714 429 429</a><br />
             <strong>Email:</strong>{" "}
-            <a href="mailto:info@siem-construction.vercel.app" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem-construction.vercel.app</a>
+            <a href="mailto:info@siem.lk" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem.lk</a>
           </address>
         </div>
         <div>
@@ -60,7 +59,7 @@ export default function ContactUs() {
         />
       </div>
       <p style={{ fontFamily: "var(--font-ui)", fontSize: "0.75rem", color: "#999", marginTop: "0.5rem", fontStyle: "italic" }}>
-        113/16, Nawala Road, Nugegoda, Sri Lanka
+        51/1, Gregory&apos;s Road, Colombo 07, Sri Lanka
       </p>
       <style>{`@media (max-width: 600px) { .contact-detail-grid { grid-template-columns: 1fr !important; } }`}</style>
     </PageLayout>

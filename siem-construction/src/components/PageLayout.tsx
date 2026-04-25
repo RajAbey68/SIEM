@@ -46,7 +46,7 @@ export default function PageLayout({ title, breadcrumbs, children }: PageLayoutP
           {/* Secondary nav widget */}
           <div style={{ background: "#fff", border: "1px solid #ddd", borderTop: "3px solid var(--brand-teal)", padding: "1.25rem" }}>
             <h4 style={{ fontFamily: "var(--font-ui)", fontSize: "0.78rem", fontWeight: 700, color: "#333", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 0.75rem" }}>Pages</h4>
-            {[["Home","/"],["About Us","/about-us"],["Services","/services"],["Past Projects","/past-projects"],["CSR & Sustainability","/csr-sustainability"],["Gallery","/gallery"],["Our Designs","/our-designs"],["Careers","/careers"],["News & Updates","/news-updates"],["Contact Us","/contact-us"]].map(([l,h]) => (
+            {[["Home","/"],["About Us","/about-us"],["Services","/services"],["Past Projects","/past-projects"],["CSR & Sustainability","/csr-sustainability"],["Gallery","/gallery"],["Careers","/careers"],["News & Updates","/news-updates"],["Contact Us","/contact-us"]].map(([l,h]) => (
               <Link key={h} href={h} style={{ display:"block", fontFamily:"var(--font-ui)", fontSize:"0.8rem", color:"var(--brand-teal)", textDecoration:"none", padding:"5px 0", borderBottom:"1px solid #f0f0f0" }}>
                 › {l}
               </Link>
@@ -68,8 +68,8 @@ export default function PageLayout({ title, breadcrumbs, children }: PageLayoutP
             <div>
               <h4 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "1rem", marginBottom: "1rem", paddingBottom: "0.5rem", borderBottom: "2px solid var(--brand-teal)" }}>Contact Info</h4>
               <p style={{ color:"rgba(255,255,255,0.6)", fontSize:"0.82rem", fontFamily:"var(--font-ui)", lineHeight:1.9, margin:0 }}>
-                SIEM (Pvt) Ltd<br/>113/16, Nawala Road,<br/>Nugegoda, Sri Lanka.<br/><br/>
-                +94 11 4513 327/8<br/>+94 11 285 6111<br/>info@siem-construction.vercel.app
+                SIEM (Pvt) Ltd<br/>51/1, Gregory&apos;s Road,<br/>Colombo 07, Sri Lanka.<br/><br/>
+                +94 718 419 419<br/>+94 714 429 429<br/>info@siem.lk
               </p>
             </div>
             <div>

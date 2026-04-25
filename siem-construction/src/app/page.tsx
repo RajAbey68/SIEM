@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
 
       {/* Welcome banner */}
-      <div style={{ background: "var(--brand-teal)", padding: "1.5rem 0" }}>
+      <div style={{ background: "#1e3a5f", padding: "1.5rem 0" }}>
         <div className="container-site">
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0, textTransform: "uppercase", letterSpacing: "0.04em" }}>
             Welcome to SIEM
@@ -68,8 +68,8 @@ export default function Home() {
           </h3>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "2rem" }} className="services-mini">
             {[
-              ["🏗️", "Civil Construction", "Residential, commercial and institutional buildings."],
-              ["🏢", "Design & Build", "Integrated delivery — single point of responsibility."],
+              ["🏗️", "Civil Construction", "Civil Construction and Structural Steel Buildings — Residential, commercial and institutional buildings."],
+              ["🪨", "Italian Tiles & Marble", "Suppliers of Italian tiles and marble — agency to import best quality tiles and marble from Italy, customized per project."],
               ["🔧", "Renovation & Retrofit", "Occupied-space renovations, minimal disruption."],
               ["📐", "Project Management", "End-to-end oversight from feasibility to handover."],
             ].map(([icon, title, desc]) => (
@@ -115,7 +115,7 @@ export default function Home() {
           {/* Pages widget */}
           <div style={{ background: "#fff", border: "1px solid #ddd", borderTop: "3px solid var(--brand-teal)", padding: "1.25rem" }}>
             <h4 style={{ fontFamily: "var(--font-ui)", fontSize: "0.78rem", fontWeight: 700, color: "#333", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 0.75rem" }}>Pages</h4>
-            {[["Home","/"],["About Us","/about-us"],["Services","/services"],["Past Projects","/past-projects"],["CSR & Sustainability","/csr-sustainability"],["Gallery","/gallery"],["Our Designs","/our-designs"],["Careers","/careers"],["News & Updates","/news-updates"],["Contact Us","/contact-us"]].map(([l,h]) => (
+            {[["Home","/"],["About Us","/about-us"],["Services","/services"],["Past Projects","/past-projects"],["CSR & Sustainability","/csr-sustainability"],["Gallery","/gallery"],["Careers","/careers"],["News & Updates","/news-updates"],["Contact Us","/contact-us"]].map(([l,h]) => (
               <Link key={h} href={h} style={{ display:"block", fontFamily:"var(--font-ui)", fontSize:"0.8rem", color:"var(--brand-teal)", textDecoration:"none", padding:"5px 0", borderBottom:"1px solid #f0f0f0" }}>
                 › {l}
               </Link>
@@ -126,11 +126,10 @@ export default function Home() {
           <div style={{ background: "#fff", border: "1px solid #ddd", borderTop: "3px solid var(--brand-teal)", padding: "1.25rem" }}>
             <h4 style={{ fontFamily: "var(--font-ui)", fontSize: "0.78rem", fontWeight: 700, color: "#333", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0 0 0.75rem" }}>Contact Us</h4>
             <p style={{ fontFamily: "var(--font-ui)", fontSize: "0.78rem", color: "#555", lineHeight: 1.9, margin: 0 }}>
-              113/16, Nawala Road,<br/>Nugegoda, Sri Lanka.<br/><br/>
-              <strong>Tel:</strong> +94 11 4513 327/8<br/>
-              <strong>Tel:</strong> +94 11 285 6111<br/>
+              <strong>Tel:</strong> +94 718 419 419<br/>
+              <strong>Tel:</strong> +94 714 429 429<br/>
               <strong>Email:</strong>{" "}
-              <a href="mailto:info@siem-construction.vercel.app" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem-construction.vercel.app</a>
+              <a href="mailto:info@siem.lk" style={{ color: "var(--brand-teal)", textDecoration: "none" }}>info@siem.lk</a>
             </p>
           </div>
         </aside>
@@ -149,8 +148,8 @@ export default function Home() {
             <div>
               <h4 style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "1rem", marginBottom: "1rem", paddingBottom: "0.5rem", borderBottom: "2px solid var(--brand-teal)" }}>Contact Info</h4>
               <p style={{ color:"rgba(255,255,255,0.6)", fontSize:"0.82rem", fontFamily:"var(--font-ui)", lineHeight:1.9, margin:0 }}>
-                SIEM (Pvt) Ltd<br/>113/16, Nawala Road,<br/>Nugegoda, Sri Lanka.<br/><br/>
-                +94 11 4513 327/8<br/>info@siem-construction.vercel.app
+                SIEM (Pvt) Ltd<br/>51/1, Gregory&apos;s Road,<br/>Colombo 07, Sri Lanka.<br/><br/>
+                +94 718 419 419<br/>+94 714 429 429<br/>info@siem.lk
               </p>
             </div>
             <div>

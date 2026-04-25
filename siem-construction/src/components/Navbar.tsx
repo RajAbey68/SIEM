@@ -14,7 +14,6 @@ const navLinks = [
   { label: "Past Projects",      href: "/past-projects" },
   { label: "CSR & Sustainability", href: "/csr-sustainability" },
   { label: "Gallery",            href: "/gallery" },
-  { label: "Our Designs",        href: "/our-designs" },
   { label: "Careers",            href: "/careers" },
   {
     label: "News & Updates",

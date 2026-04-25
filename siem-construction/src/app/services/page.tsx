@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Civil Construction",
-    desc: "We undertake the construction of residential, commercial, and institutional buildings to the highest standards of quality and workmanship. Our experience spans high-rise apartments, office complexes, hotels, and government buildings.",
+    desc: "Civil Construction and Structural Steel Buildings — Residential, commercial and institutional buildings.",
   },
   {
-    title: "Renovation & Retrofit",
-    desc: "We specialise in the renovation of existing buildings — including occupied-space refurbishments with minimal disruption to ongoing operations. Our State Bank of India project is a benchmark for heritage renovation.",
+    title: "Italian Tiles & Marble",
+    desc: "Suppliers of Italian tiles and marble — agency to import best quality tiles and marble from Italy, customized per project.",
   },
   {
     title: "Project Management",
@@ -37,7 +37,7 @@ export default function Services() {
   return (
     <PageLayout title="Services" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}>
       <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", color: "#333", marginBottom: "0.75rem" }}>
-        Our Services
+        Civil Construction and Structural Steel Buildings
       </h2>
       <div style={{ width: "40px", height: "3px", background: "var(--brand-teal)", marginBottom: "1.5rem" }} />
       <p style={{ color: "var(--brand-body)", lineHeight: 1.9, fontSize: "0.9rem", marginBottom: "2rem" }}>
@@ -55,7 +55,7 @@ export default function Services() {
         <p style={{ fontFamily: "var(--font-ui)", fontSize: "0.88rem", color: "#333", margin: 0, lineHeight: 1.8 }}>
           To discuss your project requirements, please{" "}
           <a href="/contact-us" style={{ color: "var(--brand-teal)", fontWeight: 600, textDecoration: "none" }}>contact us</a>{" "}
-          or call <strong>+94 11 4513 327</strong>.
+          or call <strong>+94 718 419 419</strong>.
         </p>
       </div>
     </PageLayout>
