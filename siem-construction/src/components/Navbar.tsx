@@ -52,9 +52,9 @@ export default function Navbar() {
 					}}
 				>
 					<Image
-						src="/images/logo-v2.png"
+						src="/images/New-SIEM-LoGo-Enhanced.png"
 						alt="SIEM (Pvt) Ltd — Leading Provider of High Quality Construction Services"
-						width={960}
+						width={1600}
 						height={1280}
 						priority
 						style={{
