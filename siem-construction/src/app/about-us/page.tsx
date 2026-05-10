@@ -3,7 +3,7 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
-	title: "About Us | SIEM",
+	title: "Studio | SIEM",
 	description:
 		"Established in 1993, SIEM is one of Sri Lanka's premier civil construction firms.",
 };
@@ -11,143 +11,57 @@ export const metadata: Metadata = {
 export default function AboutUs() {
 	return (
 		<PageLayout
-			title="About Us"
-			breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
+			title="Studio"
+			intro="Established in 1993, SIEM brings together engineering experience, construction discipline and a philosophy of trust, integrity and quality."
+			breadcrumbs={[{ label: "Home", href: "/" }, { label: "Studio" }]}
 		>
-			<div className="container-site section-pad">
-				<div
-					style={{
-						display: "grid",
-						gridTemplateColumns: "1fr 1fr",
-						gap: "3rem",
-						alignItems: "start",
-					}}
-					className="about-grid"
-				>
-					<div>
-						<h2
-							style={{
-								fontFamily: "var(--font-display)",
-								fontSize: "1.8rem",
-								color: "var(--brand-heading)",
-								marginBottom: "1.25rem",
-							}}
-						>
-							Welcome to SIEM
-						</h2>
-						<p
-							style={{
-								color: "var(--brand-body)",
-								lineHeight: 1.9,
-								marginBottom: "1rem",
-							}}
-						>
-							Established in 1993, SIEM is one of Sri Lanka&apos;s premier civil
-							construction firms. We are committed to delivering quality
-							construction solutions on time, thus earning the satisfaction of
-							our clients.
-						</p>
-						<p
-							style={{
-								color: "var(--brand-body)",
-								lineHeight: 1.9,
-								marginBottom: "1rem",
-							}}
-						>
-							Our ability to bring together the right combination of experience
-							and expertise in construction is second to none. Thanks to our
-							all-round engineering experience, we offer a comprehensive service
-							from advisory work to final construction.
-						</p>
-						<p
-							style={{
-								color: "var(--brand-body)",
-								lineHeight: 1.9,
-								marginBottom: "2rem",
-							}}
-						>
-							Our corporate philosophy of trust, integrity and quality has
-							placed us at the forefront of the construction industry. Our team
-							demonstrates a thorough understanding of the design process with
-							constant attention to quality and communication.
-						</p>
-						<div
-							style={{
-								display: "grid",
-								gridTemplateColumns: "1fr 1fr",
-								gap: "1rem",
-							}}
-						>
-							{[
-								["1993", "Year Established"],
-								["33+", "Years of Experience"],
-								["200+", "Projects Completed"],
-								["LK", "Base of Operations"],
-							].map(([v, l]) => (
-								<div
-									key={l}
-									style={{
-										background: "var(--brand-teal-light)",
-										borderLeft: "3px solid var(--brand-teal)",
-										padding: "1rem 1.25rem",
-										borderRadius: "2px",
-									}}
-								>
-									<div
-										style={{
-											fontFamily: "var(--font-display)",
-											fontSize: "1.8rem",
-											fontWeight: 700,
-											color: "var(--brand-teal)",
-											lineHeight: 1,
-										}}
-									>
-										{v}
-									</div>
-									<div
-										style={{
-											fontFamily: "var(--font-ui)",
-											fontSize: "0.78rem",
-											color: "var(--brand-body)",
-											marginTop: "0.3rem",
-										}}
-									>
-										{l}
-									</div>
-								</div>
-							))}
-						</div>
-					</div>
-					<div
-						style={{
-							position: "relative",
-							borderRadius: "4px",
-							overflow: "hidden",
-						}}
-					>
+			<div style={{ display: "grid", gap: "1.5rem" }}>
+				<div className="project-card">
+					<div className="project-image" style={{ aspectRatio: "16 / 9" }}>
 						<Image
-							src="/images/ai-about-team.png"
-							alt="SIEM team — AI Visualisation Placeholder"
-							width={600}
-							height={400}
-							style={{ width: "100%", height: "auto", borderRadius: "4px" }}
+							src="/images/projects/site-01.jpg"
+							alt="SIEM construction team and project context"
+							fill
+							sizes="60vw"
 						/>
-						<div
-							style={{
-								marginTop: "0.5rem",
-								fontSize: "0.72rem",
-								color: "var(--brand-body)",
-								fontFamily: "var(--font-ui)",
-								textAlign: "center",
-								fontStyle: "italic",
-							}}
-						>
-							AI Visualisation · Placeholder image — real team photo to be added
-						</div>
+					</div>
+					<div className="project-body">
+						<p className="eyebrow">Company Profile</p>
+						<h2 className="section-title" style={{ fontSize: "clamp(2rem, 4vw, 3.8rem)" }}>
+							Sri Lanka&apos;s trusted construction partner.
+						</h2>
 					</div>
 				</div>
+
+				<p className="lead">
+					SIEM is one of Sri Lanka&apos;s premier civil construction firms. We are
+					committed to delivering quality construction solutions on time, earning
+					the satisfaction of our clients. Our ability to bring together the
+					right combination of experience and expertise in construction is second
+					to none.
+				</p>
+				<p className="lead">
+					Thanks to our all-round engineering experience, we offer a
+					comprehensive service from advisory work to final construction. The
+					future positioning highlights the same foundation through a more modern
+					lens: tropical climate intelligence, luxury residential and boutique
+					hotel quality, commercial fit-out and careful colonial renovation.
+				</p>
+
+				<div className="content-grid">
+					{[
+						["1993", "Year established"],
+						["33+", "Years of experience"],
+						["200+", "Projects completed"],
+						["Sri Lanka", "Base of operations"],
+					].map(([value, label]) => (
+						<div className="feature-card" key={label}>
+							<h3 style={{ fontSize: "2.4rem" }}>{value}</h3>
+							<p>{label}</p>
+						</div>
+					))}
+				</div>
 			</div>
-			<style>{`@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr !important; } }`}</style>
 		</PageLayout>
 	);
 }

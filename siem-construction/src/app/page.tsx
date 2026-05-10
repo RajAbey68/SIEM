@@ -1,610 +1,246 @@
+import { ArrowUpRight, Leaf, Landmark, Waves } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import QuickContact from "@/components/QuickContact";
+import { SiteFooter } from "@/components/PageLayout";
 
-/* ─── Homepage with two-column layout matching siem-construction.vercel.app ─── */
+const services = [
+	{
+		title: "Tropical Civil Construction",
+		text: "Residential, commercial and institutional buildings shaped for Sri Lankan light, rain, heat, airflow and long service life.",
+	},
+	{
+		title: "Luxury Villas & Boutique Hospitality",
+		text: "High-touch construction, fit-out coordination, imported finishes, Italian tiles and marble, and detail-led handover.",
+	},
+	{
+		title: "Colonial Renovation & Retrofit",
+		text: "Sensitive upgrades to heritage structures, occupied spaces and banking halls with minimum disruption and careful sequencing.",
+	},
+	{
+		title: "Project Management",
+		text: "End-to-end oversight from feasibility, cost planning and buildability through final construction and handover.",
+	},
+];
+
+const projects = [
+	{
+		img: "/images/projects/site-01.jpg",
+		title: "Private Residential Works",
+		kicker: "Tropical living",
+	},
+	{
+		img: "/images/projects/sbi-after.jpg",
+		title: "Heritage Banking Renovation",
+		kicker: "Colonial retrofit",
+	},
+	{
+		img: "/images/projects/lobby-area.jpg",
+		title: "Commercial Hospitality Finish",
+		kicker: "Fit-out detail",
+	},
+];
+
 export default function Home() {
 	return (
 		<>
 			<Navbar />
-
-			{/* Welcome banner */}
-			<div style={{ background: "var(--brand-navy)", padding: "1.5rem 0" }}>
-				<div className="container-site">
-					<h1
-						style={{
-							fontFamily: "var(--font-display)",
-							fontSize: "1.5rem",
-							fontWeight: 700,
-							color: "#fff",
-							margin: 0,
-							textTransform: "uppercase",
-							letterSpacing: "0.04em",
-						}}
-					>
-						Welcome to SIEM
-					</h1>
-				</div>
-			</div>
-
-			{/* ── Two-column body ── */}
-			<div
-				className="container-site home-body"
-				style={{
-					display: "grid",
-					gridTemplateColumns: "1fr 280px",
-					gap: "2rem",
-					padding: "2rem var(--section-px)",
-				}}
-			>
-				{/* ── LEFT: main content ── */}
-				<main style={{ minWidth: 0 }}>
-					{/* Hero image */}
-					<div
-						style={{
-							position: "relative",
-							width: "100%",
-							height: "340px",
-							marginBottom: "1.5rem",
-							borderRadius: "2px",
-							overflow: "hidden",
-						}}
-					>
-						<Image
-							src="/images/projects/site-01.jpg"
-							alt="SIEM — quality built for Sri Lanka"
-							fill
-							sizes="(max-width: 768px) 100vw, 65vw"
-							style={{ objectFit: "cover" }}
-							priority
-						/>
-					</div>
-
-					{/* Intro text */}
-					<h2
-						style={{
-							fontFamily: "var(--font-display)",
-							fontSize: "1.4rem",
-							color: "#333",
-							marginBottom: "1rem",
-						}}
-					>
-						Established 1993 — Sri Lanka&apos;s Trusted Construction Partner
-					</h2>
-					<div
-						style={{
-							width: "40px",
-							height: "3px",
-							background: "var(--brand-teal)",
-							marginBottom: "1.25rem",
-						}}
+			<section className="hero">
+				<div className="hero-media">
+					<Image
+						src="/images/projects/site-03.jpg"
+						alt="SIEM construction project in Sri Lanka"
+						fill
+						className="hero-image"
+						priority
+						sizes="100vw"
 					/>
-
-					<p
-						style={{
-							color: "var(--brand-body)",
-							lineHeight: 1.9,
-							fontSize: "0.9rem",
-							marginBottom: "1rem",
-						}}
-					>
-						SIEM is one of Sri Lanka&apos;s premier civil construction firms. We
-						are committed to deliver quality construction solutions on time thus
-						earning the satisfaction of our clients. Our ability to bring
-						together the right combination of experience and expertise in
-						construction is second to none.
-					</p>
-					<p
-						style={{
-							color: "var(--brand-body)",
-							lineHeight: 1.9,
-							fontSize: "0.9rem",
-							marginBottom: "1rem",
-						}}
-					>
-						Thanks to our all-round engineering experience, we offer a
-						comprehensive service from advisory work to final construction,
-						which satisfies the highest demands in terms of quality,
-						cost-effectiveness and time. Our corporate philosophy of trust,
-						integrity and quality has placed us at the forefront of the
-						construction industry.
-					</p>
-					<p
-						style={{
-							color: "var(--brand-body)",
-							lineHeight: 1.9,
-							fontSize: "0.9rem",
-							marginBottom: "2rem",
-						}}
-					>
-						Our team demonstrates a thorough understanding of the design process
-						with constant attention to quality and communication, ensuring that
-						all our projects are completed to the highest standard of
-						workmanship and on schedule.
-					</p>
-
-					{/* Stats row */}
-					<div
-						style={{
-							display: "grid",
-							gridTemplateColumns: "repeat(4,1fr)",
-							gap: "1px",
-							background: "#ddd",
-							border: "1px solid #ddd",
-							marginBottom: "2rem",
-						}}
-						className="stats-row"
-					>
-						{[
-							["1993", "Year Founded"],
-							["33+", "Years of Experience"],
-							["200+", "Projects Completed"],
-							["Sri Lanka", "Base of Operations"],
-						].map(([v, l]) => (
-							<div
-								key={l}
-								style={{
-									background: "#fff",
-									padding: "1.25rem 1rem",
-									textAlign: "center",
-								}}
-							>
-								<div
-									style={{
-										fontFamily: "var(--font-display)",
-										fontSize: "1.8rem",
-										fontWeight: 700,
-										color: "var(--brand-navy)",
-										lineHeight: 1,
-									}}
-								>
-									{v}
-								</div>
-								<div
-									style={{
-										fontFamily: "var(--font-ui)",
-										fontSize: "0.68rem",
-										color: "#666",
-										marginTop: "0.3rem",
-										textTransform: "uppercase",
-										letterSpacing: "0.06em",
-									}}
-								>
-									{l}
-								</div>
-							</div>
-						))}
-					</div>
-
-					{/* Services preview */}
-					<h3
-						style={{
-							fontFamily: "var(--font-display)",
-							fontSize: "1.15rem",
-							color: "#333",
-							marginBottom: "1rem",
-							paddingBottom: "0.5rem",
-							borderBottom: "2px solid var(--brand-teal)",
-						}}
-					>
-						Our Services
-					</h3>
-					<div
-						style={{
-							display: "grid",
-							gridTemplateColumns: "1fr 1fr",
-							gap: "1rem",
-							marginBottom: "2rem",
-						}}
-						className="services-mini"
-					>
-						{[
-							[
-								"🏗️",
-								"Civil Construction",
-								"Civil Construction and Structural Steel Buildings — Residential, commercial and institutional buildings.",
-							],
-							[
-								"🪨",
-								"Italian Tiles & Marble",
-								"Suppliers of Italian tiles and marble — agency to import best quality tiles and marble from Italy, customized per project.",
-							],
-							[
-								"🔧",
-								"Renovation & Retrofit",
-								"Occupied-space renovations, minimal disruption.",
-							],
-							[
-								"📐",
-								"Project Management",
-								"End-to-end oversight from feasibility to handover.",
-							],
-						].map(([icon, title, desc]) => (
-							<div
-								key={title as string}
-								style={{
-									padding: "1rem",
-									border: "1px solid #e5e5e5",
-									borderTop: "3px solid var(--brand-teal)",
-									borderRadius: "2px",
-								}}
-							>
-								<div style={{ fontSize: "1.4rem", marginBottom: "0.5rem" }}>
-									{icon}
-								</div>
-								<h4
-									style={{
-										fontFamily: "var(--font-display)",
-										fontSize: "0.88rem",
-										color: "#333",
-										marginBottom: "0.3rem",
-									}}
-								>
-									{title as string}
-								</h4>
-								<p
-									style={{
-										fontFamily: "var(--font-ui)",
-										fontSize: "0.78rem",
-										color: "#666",
-										margin: 0,
-										lineHeight: 1.7,
-									}}
-								>
-									{desc as string}
-								</p>
-							</div>
-						))}
-					</div>
-
-					{/* Recent projects */}
-					<h3
-						style={{
-							fontFamily: "var(--font-display)",
-							fontSize: "1.15rem",
-							color: "#333",
-							marginBottom: "1rem",
-							paddingBottom: "0.5rem",
-							borderBottom: "2px solid var(--brand-teal)",
-						}}
-					>
-						Recent Projects
-					</h3>
-					<div
-						style={{
-							display: "grid",
-							gridTemplateColumns: "repeat(3,1fr)",
-							gap: "1rem",
-							marginBottom: "1.5rem",
-						}}
-						className="projects-mini"
-					>
-						{[
-							{
-								img: "/images/projects/site-01.jpg",
-								title: "Luxury Residential",
-								sub: "Colombo",
-							},
-							{
-								img: "/images/projects/sbi-after.jpg",
-								title: "Bank Renovation",
-								sub: "Heritage · Colombo",
-							},
-							{
-								img: "/images/projects/site-03.jpg",
-								title: "Commercial Development",
-								sub: "Colombo 2",
-							},
-						].map((p) => (
-							<div
-								key={p.title}
-								style={{
-									border: "1px solid #e5e5e5",
-									borderRadius: "2px",
-									overflow: "hidden",
-								}}
-							>
-								<div style={{ position: "relative", height: "140px" }}>
-									<Image
-										src={p.img}
-										alt={p.title}
-										fill
-										sizes="22vw"
-										style={{ objectFit: "cover" }}
-									/>
-								</div>
-								<div
-									style={{
-										padding: "0.75rem",
-										borderTop: "2px solid var(--brand-teal)",
-									}}
-								>
-									<p
-										style={{
-											fontFamily: "var(--font-display)",
-											fontSize: "0.82rem",
-											color: "#333",
-											margin: 0,
-										}}
-									>
-										{p.title}
-									</p>
-									<p
-										style={{
-											fontFamily: "var(--font-ui)",
-											fontSize: "0.72rem",
-											color: "var(--brand-navy)",
-											margin: "2px 0 0",
-										}}
-									>
-										{p.sub}
-									</p>
-								</div>
-							</div>
-						))}
-					</div>
-					<Link
-						href="/past-projects"
-						style={{
-							fontFamily: "var(--font-ui)",
-							fontSize: "0.82rem",
-							fontWeight: 600,
-							color: "var(--brand-navy)",
-							textDecoration: "none",
-						}}
-					>
-						→ View All Past Projects
-					</Link>
-				</main>
-
-				{/* ── RIGHT: sidebar ── */}
-				<aside
-					style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
-				>
-					<QuickContact />
-
-					{/* Pages widget */}
-					<div
-						style={{
-							background: "#fff",
-							border: "1px solid #ddd",
-							borderTop: "3px solid var(--brand-teal)",
-							padding: "1.25rem",
-						}}
-					>
-						<h4
-							style={{
-								fontFamily: "var(--font-ui)",
-								fontSize: "0.78rem",
-								fontWeight: 700,
-								color: "#333",
-								textTransform: "uppercase",
-								letterSpacing: "0.08em",
-								margin: "0 0 0.75rem",
-							}}
-						>
-							Pages
-						</h4>
-						{[
-							["Home", "/"],
-							["About Us", "/about-us"],
-							["Services", "/services"],
-							["Past Projects", "/past-projects"],
-							["CSR & Sustainability", "/csr-sustainability"],
-							["Gallery", "/gallery"],
-							["Careers", "/careers"],
-							["News & Updates", "/news-updates"],
-							["Contact Us", "/contact-us"],
-						].map(([l, h]) => (
-							<Link
-								key={h}
-								href={h}
-								style={{
-									display: "block",
-									fontFamily: "var(--font-ui)",
-									fontSize: "0.8rem",
-									color: "var(--brand-navy)",
-									textDecoration: "none",
-									padding: "5px 0",
-									borderBottom: "1px solid #f0f0f0",
-								}}
-							>
-								› {l}
-							</Link>
-						))}
-					</div>
-
-					{/* Contact info widget */}
-					<div
-						style={{
-							background: "#fff",
-							border: "1px solid #ddd",
-							borderTop: "3px solid var(--brand-teal)",
-							padding: "1.25rem",
-						}}
-					>
-						<h4
-							style={{
-								fontFamily: "var(--font-ui)",
-								fontSize: "0.78rem",
-								fontWeight: 700,
-								color: "#333",
-								textTransform: "uppercase",
-								letterSpacing: "0.08em",
-								margin: "0 0 0.75rem",
-							}}
-						>
-							Contact Us
-						</h4>
-						<p
-							style={{
-								fontFamily: "var(--font-ui)",
-								fontSize: "0.78rem",
-								color: "#555",
-								lineHeight: 1.9,
-								margin: 0,
-							}}
-						>
-							<strong>Tel:</strong> +94 718 419 419
-							<br />
-							<strong>Tel:</strong> +94 714 429 429
-							<br />
-							<strong>Email:</strong>{" "}
-							<a
-								href="mailto:info@siem.lk"
-								style={{ color: "var(--brand-navy)", textDecoration: "none" }}
-							>
-								info@siem.lk
-							</a>
+				</div>
+				<div className="container-site hero-content">
+					<div className="hero-copy">
+						<p className="eyebrow" style={{ color: "var(--stone)" }}>
+							Future concept branch
 						</p>
-					</div>
-				</aside>
-			</div>
-
-			{/* Footer */}
-			<footer>
-				<div style={{ background: "var(--brand-footer)", padding: "2.5rem 0" }}>
-					<div
-						className="container-site footer-grid"
-						style={{
-							display: "grid",
-							gridTemplateColumns: "repeat(3,1fr)",
-							gap: "2rem",
-						}}
-					>
-						<div>
-							<h4
-								style={{
-									fontFamily: "var(--font-display)",
-									color: "#fff",
-									fontSize: "1rem",
-									marginBottom: "1rem",
-									paddingBottom: "0.5rem",
-									borderBottom: "2px solid var(--brand-teal)",
-								}}
-							>
-								Quick Links
-							</h4>
+						<h1 className="display">
+							Buildings shaped by climate, craft and continuity.
+						</h1>
+						<p className="lead" style={{ marginTop: "1.4rem" }}>
+							SIEM is one of Sri Lanka&apos;s premier civil construction firms,
+							established in 1993 and committed to quality construction
+							solutions on time. This future site reframes that legacy for
+							tropical homes, boutique hospitality, commercial works and
+							colonial renovation.
+						</p>
+						<div className="hero-actions">
+							<Link href="/past-projects" className="btn btn-light">
+								View Projects <ArrowUpRight size={16} />
+							</Link>
+							<Link href="/contact-us" className="btn btn-outline" style={{ color: "var(--paper)", borderColor: "rgba(248,244,236,0.5)" }}>
+								Start a Conversation
+							</Link>
+						</div>
+						<div className="metric-grid">
 							{[
-								["Home", "/"],
-								["About Us", "/about-us"],
-								["Services", "/services"],
-								["Past Projects", "/past-projects"],
-								["Gallery", "/gallery"],
-								["Contact Us", "/contact-us"],
-							].map(([l, h]) => (
-								<Link
-									key={h}
-									href={h}
-									style={{
-										display: "block",
-										color: "rgba(255,255,255,0.6)",
-										fontFamily: "var(--font-ui)",
-										fontSize: "0.82rem",
-										textDecoration: "none",
-										marginBottom: "0.4rem",
-									}}
-								>
-									{l}
-								</Link>
+								["1993", "Year founded"],
+								["33+", "Years of experience"],
+								["200+", "Projects completed"],
+								["LK", "Base of operations"],
+							].map(([value, label]) => (
+								<div className="metric" key={label}>
+									<strong>{value}</strong>
+									<span>{label}</span>
+								</div>
 							))}
 						</div>
+					</div>
+					<div className="hero-panel">
+						<p className="eyebrow">What changes</p>
+						<h2 style={{ fontFamily: "var(--font-display)", fontSize: "2rem", lineHeight: 1, margin: "0.5rem 0" }}>
+							A site that feels built, not decorated.
+						</h2>
+						<p style={{ color: "var(--ink-soft)", margin: 0 }}>
+							The direction takes cues from Awwwards editorial UI, tropical
+							modern villas, boutique hotel contractors, and colonial renovation
+							specialists while keeping SIEM&apos;s verified facts.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section className="section">
+				<div className="container-site split">
+					<div>
+						<p className="eyebrow">Positioning</p>
+						<h2 className="section-title">
+							From contractor profile to premium building partner.
+						</h2>
+					</div>
+					<div>
+						<p className="lead">
+							The current company story stays intact: trust, integrity, quality,
+							all-round engineering experience, and a complete service from
+							advisory work to final construction. The future expression adds a
+							more confident market signal for clients building villas, homes,
+							boutique hotels, refined commercial interiors and heritage spaces.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section className="section dark-band">
+				<div className="container-site">
+					<div className="split" style={{ alignItems: "end", marginBottom: "2rem" }}>
 						<div>
-							<h4
-								style={{
-									fontFamily: "var(--font-display)",
-									color: "#fff",
-									fontSize: "1rem",
-									marginBottom: "1rem",
-									paddingBottom: "0.5rem",
-									borderBottom: "2px solid var(--brand-teal)",
-								}}
-							>
-								Contact Info
-							</h4>
-							<p
-								style={{
-									color: "rgba(255,255,255,0.6)",
-									fontSize: "0.82rem",
-									fontFamily: "var(--font-ui)",
-									lineHeight: 1.9,
-									margin: 0,
-								}}
-							>
-								SIEM (Pvt) Ltd
-								<br />
-								51/1, Gregory&apos;s Road,
-								<br />
-								Colombo 07, Sri Lanka.
-								<br />
-								<br />
-								+94 718 419 419
-								<br />
-								+94 714 429 429
-								<br />
-								info@siem.lk
+							<p className="eyebrow">Modernisation Concepts</p>
+							<h2 className="section-title">Built for the tropics.</h2>
+						</div>
+						<p className="lead">
+							A future SIEM site should talk about shade, cross ventilation,
+							monsoon durability, material honesty, restoration discipline and
+							the elegance expected in Sri Lanka&apos;s villa and hospitality market.
+						</p>
+					</div>
+					<div className="card-grid">
+						<div className="feature-card">
+							<Waves size={28} color="var(--stone)" />
+							<h3>Climate-first planning</h3>
+							<p>
+								Passive cooling, deep overhangs, rain-aware detailing, drainage
+								and site infrastructure presented as construction intelligence.
 							</p>
 						</div>
-						<div>
-							<h4
-								style={{
-									fontFamily: "var(--font-display)",
-									color: "#fff",
-									fontSize: "1rem",
-									marginBottom: "1rem",
-									paddingBottom: "0.5rem",
-									borderBottom: "2px solid var(--brand-teal)",
-								}}
-							>
-								About Siem
-							</h4>
-							<p
-								style={{
-									color: "rgba(255,255,255,0.6)",
-									fontSize: "0.82rem",
-									fontFamily: "var(--font-ui)",
-									lineHeight: 1.9,
-									margin: 0,
-								}}
-							>
-								Established in 1993, SIEM is one of Sri Lanka&apos;s premier
-								civil construction firms, committed to delivering quality
-								solutions on time.
+						<div className="feature-card">
+							<Leaf size={28} color="var(--stone)" />
+							<h3>Natural materials</h3>
+							<p>
+								Stone, timber, marble, tile and steel treated as part of the
+								project story, from sourcing to installation quality.
+							</p>
+						</div>
+						<div className="feature-card">
+							<Landmark size={28} color="var(--stone)" />
+							<h3>Heritage upgrades</h3>
+							<p>
+								Colonial renovation framed around preservation, discreet MEP,
+								structural retrofit and polished handover.
 							</p>
 						</div>
 					</div>
 				</div>
-				<div
-					style={{
-						background: "var(--brand-footer-bar)",
-						padding: "1rem 0",
-						textAlign: "center",
-					}}
-				>
-					<p
-						style={{
-							color: "rgba(255,255,255,0.4)",
-							fontSize: "0.78rem",
-							fontFamily: "var(--font-ui)",
-							margin: 0,
-						}}
-					>
-						Copyright {new Date().getFullYear()} — SIEM (Pvt) Ltd · All Rights
-						Reserved
-					</p>
-				</div>
-			</footer>
+			</section>
 
-			<style>{`
-        @media (max-width: 768px) {
-          .home-body { grid-template-columns: 1fr !important; }
-          .footer-grid { grid-template-columns: 1fr !important; }
-          .stats-row { grid-template-columns: repeat(2,1fr) !important; }
-          .services-mini { grid-template-columns: 1fr !important; }
-          .projects-mini { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
+			<section className="section">
+				<div className="container-site">
+					<div className="split" style={{ alignItems: "end", marginBottom: "2rem" }}>
+						<div>
+							<p className="eyebrow">Services</p>
+							<h2 className="section-title">A sharper offer.</h2>
+						</div>
+						<Link href="/services" className="btn btn-outline">
+							All Services <ArrowUpRight size={16} />
+						</Link>
+					</div>
+					<div className="card-grid">
+						{services.map((service) => (
+							<article className="feature-card" key={service.title}>
+								<h3>{service.title}</h3>
+								<p>{service.text}</p>
+							</article>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section className="section" style={{ paddingTop: 0 }}>
+				<div className="container-site">
+					<div className="split" style={{ alignItems: "end", marginBottom: "2rem" }}>
+						<div>
+							<p className="eyebrow">Selected Works</p>
+							<h2 className="section-title">Proof through places.</h2>
+						</div>
+						<Link href="/gallery" className="btn btn-outline">
+							Open Gallery <ArrowUpRight size={16} />
+						</Link>
+					</div>
+					<div className="card-grid">
+						{projects.map((project) => (
+							<article className="project-card" key={project.title}>
+								<div className="project-image">
+									<Image src={project.img} alt={project.title} fill sizes="33vw" />
+								</div>
+								<div className="project-body">
+									<p className="eyebrow">{project.kicker}</p>
+									<h3>{project.title}</h3>
+								</div>
+							</article>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section className="section dark-band">
+				<div className="container-site split">
+					<div>
+						<p className="eyebrow">Contact</p>
+						<h2 className="section-title">For homes, hotels, institutions and careful renovations.</h2>
+					</div>
+					<div>
+						<p className="lead">
+							Call +94 718 419 419 or +94 714 429 429, or email info@siem.lk.
+							Head office: 51/1, Gregory&apos;s Road, Colombo 07, Sri Lanka.
+						</p>
+						<div className="hero-actions">
+							<a href="tel:+94718419419" className="btn btn-light">
+								Call SIEM
+							</a>
+							<a href="mailto:info@siem.lk" className="btn btn-outline" style={{ color: "var(--paper)", borderColor: "rgba(248,244,236,0.5)" }}>
+								Email Brief
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<SiteFooter />
 		</>
 	);
 }

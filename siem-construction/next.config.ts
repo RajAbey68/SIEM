@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
+import path from "node:path";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: path.resolve(__dirname),
+  },
   images: {
     // Allow locally hosted images in /public (default) + any external domains if needed later
     formats: ["image/avif", "image/webp"],

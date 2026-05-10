@@ -26,7 +26,7 @@ const outfit = Outfit({
 
 /* ── SEO metadata — verified copy only ─────────────────────── */
 export const metadata: Metadata = {
-	title: "SIEM (Pvt) Ltd | Sri Lanka",
+	title: "siem-nextgen | SIEM Future Concept",
 	description:
 		"SIEM is one of Sri Lanka's premier civil engineering firms. Established 1993, committed to delivering quality solutions on time. Based in Colombo.",
 	keywords: "SIEM, Sri Lanka, civil engineering, renovation, Colombo",
