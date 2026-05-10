@@ -1,43 +1,55 @@
-import { ArrowUpRight, Leaf, Landmark, Waves } from "lucide-react";
+import { ArrowUpRight, Building2, Compass, Landmark, Leaf } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { SiteFooter } from "@/components/PageLayout";
 
-const services = [
+const proof = [
+	["1993", "founded"],
+	["33+", "years"],
+	["200+", "projects"],
+	["Colombo", "base"],
+];
+
+const architectSignals = [
 	{
-		title: "Tropical Civil Construction",
-		text: "Residential, commercial and institutional buildings shaped for Sri Lankan light, rain, heat, airflow and long service life.",
+		icon: Compass,
+		title: "Architect-first execution",
+		text: "A quiet contractor posture: protect the architect's intent, solve the site, keep the client calm.",
 	},
 	{
-		title: "Luxury Villas & Boutique Hospitality",
-		text: "High-touch construction, fit-out coordination, imported finishes, Italian tiles and marble, and detail-led handover.",
+		icon: Leaf,
+		title: "Tropical intelligence",
+		text: "Shade, monsoon edges, drainage, airflow, tactile finishes and buildings that age with heat and rain.",
 	},
 	{
-		title: "Colonial Renovation & Retrofit",
-		text: "Sensitive upgrades to heritage structures, occupied spaces and banking halls with minimum disruption and careful sequencing.",
+		icon: Landmark,
+		title: "Heritage without theatre",
+		text: "Colonial renovation, banking interiors and retrofit work handled with restraint, sequence and respect.",
 	},
 	{
-		title: "Project Management",
-		text: "End-to-end oversight from feasibility, cost planning and buildability through final construction and handover.",
+		icon: Building2,
+		title: "Luxury that feels inevitable",
+		text: "Villa, house, boutique hotel and commercial fit-out work framed around craft, proportion and handover.",
 	},
 ];
 
-const projects = [
+const imageStack = [
 	{
-		img: "/images/projects/site-01.jpg",
-		title: "Private Residential Works",
-		kicker: "Tropical living",
+		src: "/images/projects/sbi-after.jpg",
+		label: "Heritage renovation / Colombo",
 	},
 	{
-		img: "/images/projects/sbi-after.jpg",
-		title: "Heritage Banking Renovation",
-		kicker: "Colonial retrofit",
+		src: "/images/projects/lobby-area.jpg",
+		label: "Hospitality-grade interiors",
 	},
 	{
-		img: "/images/projects/lobby-area.jpg",
-		title: "Commercial Hospitality Finish",
-		kicker: "Fit-out detail",
+		src: "/images/projects/site-01.jpg",
+		label: "Tropical residential structure",
+	},
+	{
+		src: "/images/projects/site-03.jpg",
+		label: "Commercial build discipline",
 	},
 ];
 
@@ -45,201 +57,166 @@ export default function Home() {
 	return (
 		<>
 			<Navbar />
-			<section className="hero">
-				<div className="hero-media">
-					<Image
-						src="/images/projects/site-03.jpg"
-						alt="SIEM construction project in Sri Lanka"
-						fill
-						className="hero-image"
-						priority
-						sizes="100vw"
-					/>
-				</div>
-				<div className="container-site hero-content">
-					<div className="hero-copy">
-						<p className="eyebrow" style={{ color: "var(--stone)" }}>
-							Future concept branch
-						</p>
-						<h1 className="display">
-							Buildings shaped by climate, craft and continuity.
-						</h1>
-						<p className="lead" style={{ marginTop: "1.4rem" }}>
-							SIEM is one of Sri Lanka&apos;s premier civil construction firms,
-							established in 1993 and committed to quality construction
-							solutions on time. This future site reframes that legacy for
-							tropical homes, boutique hospitality, commercial works and
-							colonial renovation.
-						</p>
-						<div className="hero-actions">
-							<Link href="/past-projects" className="btn btn-light">
-								View Projects <ArrowUpRight size={16} />
-							</Link>
-							<Link href="/contact-us" className="btn btn-outline" style={{ color: "var(--paper)", borderColor: "rgba(248,244,236,0.5)" }}>
-								Start a Conversation
-							</Link>
+			<main>
+				<section className="v3-hero">
+					<div className="v3-hero-media">
+						<Image
+							src="/images/projects/past-projects-banner.jpg"
+							alt="SIEM tropical construction project"
+							fill
+							priority
+							sizes="100vw"
+						/>
+					</div>
+					<div className="container-site v3-hero-grid">
+						<div className="v3-hero-copy">
+							<p className="eyebrow">siem-nextgen / concept v3</p>
+							<h1>
+								The build partner architects call before the client panics.
+							</h1>
 						</div>
-						<div className="metric-grid">
-							{[
-								["1993", "Year founded"],
-								["33+", "Years of experience"],
-								["200+", "Projects completed"],
-								["LK", "Base of operations"],
-							].map(([value, label]) => (
-								<div className="metric" key={label}>
-									<strong>{value}</strong>
-									<span>{label}</span>
-								</div>
+						<div className="v3-hero-note">
+							<p>
+								SIEM is one of Sri Lanka&apos;s premier civil construction firms,
+								established in 1993. This version moves the brand from contractor
+								brochure to architectural confidence: tropical homes, boutique
+								hotels, commercial works and colonial renovation for clients who
+								notice proportion, silence and detail.
+							</p>
+							<div className="v3-actions">
+								<Link href="/past-projects" className="btn btn-light">
+									Project Index <ArrowUpRight size={16} />
+								</Link>
+								<Link href="/contact-us" className="btn btn-outline v3-outline">
+									Private Brief
+								</Link>
+							</div>
+						</div>
+					</div>
+					<div className="container-site v3-proof-strip">
+						{proof.map(([value, label]) => (
+							<div key={label}>
+								<strong>{value}</strong>
+								<span>{label}</span>
+							</div>
+						))}
+					</div>
+				</section>
+
+				<section className="v3-black">
+					<div className="container-site v3-manifesto">
+						<p className="eyebrow">For Colombo, Singapore, Hong Kong, Malaysia and the Gulf</p>
+						<h2>
+							Not a builder shouting for attention. A contractor fluent in
+							architectural restraint.
+						</h2>
+						<p>
+							High-net-worth buyers are not buying concrete. They are buying a
+							place that feels inevitable: shaded, quiet, tactile, private and
+							well made. Architects are buying a site partner who understands that
+							the drawing is not decoration. It is a promise.
+						</p>
+					</div>
+					<div className="container-site v3-signal-grid">
+						{architectSignals.map((item) => {
+							const Icon = item.icon;
+							return (
+								<article key={item.title} className="v3-signal">
+									<Icon size={25} />
+									<h3>{item.title}</h3>
+									<p>{item.text}</p>
+								</article>
+							);
+						})}
+					</div>
+				</section>
+
+				<section className="v3-atelier">
+					<div className="container-site v3-atelier-grid">
+						<div>
+							<p className="eyebrow">Material Theatre</p>
+							<h2>
+								Stone, timber, marble, rainwater, shadow, old walls, new steel.
+							</h2>
+							<p>
+								The radical move is not louder colour. It is making SIEM feel
+								like the contractor behind places that appear effortless:
+								verandas that breathe, corridors that stay cool, colonial fabric
+								that still has dignity, imported finishes installed without fuss.
+							</p>
+						</div>
+						<div className="v3-image-stack">
+							{imageStack.map((image, index) => (
+								<figure key={image.src} className={`v3-stack-card card-${index + 1}`}>
+									<Image src={image.src} alt={image.label} fill sizes="45vw" />
+									<figcaption>{image.label}</figcaption>
+								</figure>
 							))}
 						</div>
 					</div>
-					<div className="hero-panel">
-						<p className="eyebrow">What changes</p>
-						<h2 style={{ fontFamily: "var(--font-display)", fontSize: "2rem", lineHeight: 1, margin: "0.5rem 0" }}>
-							A site that feels built, not decorated.
-						</h2>
-						<p style={{ color: "var(--ink-soft)", margin: 0 }}>
-							The direction takes cues from Awwwards editorial UI, tropical
-							modern villas, boutique hotel contractors, and colonial renovation
-							specialists while keeping SIEM&apos;s verified facts.
-						</p>
-					</div>
-				</div>
-			</section>
+				</section>
 
-			<section className="section">
-				<div className="container-site split">
-					<div>
-						<p className="eyebrow">Positioning</p>
-						<h2 className="section-title">
-							From contractor profile to premium building partner.
-						</h2>
-					</div>
-					<div>
-						<p className="lead">
-							The current company story stays intact: trust, integrity, quality,
-							all-round engineering experience, and a complete service from
-							advisory work to final construction. The future expression adds a
-							more confident market signal for clients building villas, homes,
-							boutique hotels, refined commercial interiors and heritage spaces.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<section className="section dark-band">
-				<div className="container-site">
-					<div className="split" style={{ alignItems: "end", marginBottom: "2rem" }}>
+				<section className="v3-map">
+					<div className="container-site v3-map-grid">
 						<div>
-							<p className="eyebrow">Modernisation Concepts</p>
-							<h2 className="section-title">Built for the tropics.</h2>
+							<p className="eyebrow">The buyer psychology</p>
+							<h2>Discretion sells better than spectacle.</h2>
 						</div>
-						<p className="lead">
-							A future SIEM site should talk about shade, cross ventilation,
-							monsoon durability, material honesty, restoration discipline and
-							the elegance expected in Sri Lanka&apos;s villa and hospitality market.
-						</p>
-					</div>
-					<div className="card-grid">
-						<div className="feature-card">
-							<Waves size={28} color="var(--stone)" />
-							<h3>Climate-first planning</h3>
-							<p>
-								Passive cooling, deep overhangs, rain-aware detailing, drainage
-								and site infrastructure presented as construction intelligence.
-							</p>
-						</div>
-						<div className="feature-card">
-							<Leaf size={28} color="var(--stone)" />
-							<h3>Natural materials</h3>
-							<p>
-								Stone, timber, marble, tile and steel treated as part of the
-								project story, from sourcing to installation quality.
-							</p>
-						</div>
-						<div className="feature-card">
-							<Landmark size={28} color="var(--stone)" />
-							<h3>Heritage upgrades</h3>
-							<p>
-								Colonial renovation framed around preservation, discreet MEP,
-								structural retrofit and polished handover.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section className="section">
-				<div className="container-site">
-					<div className="split" style={{ alignItems: "end", marginBottom: "2rem" }}>
-						<div>
-							<p className="eyebrow">Services</p>
-							<h2 className="section-title">A sharper offer.</h2>
-						</div>
-						<Link href="/services" className="btn btn-outline">
-							All Services <ArrowUpRight size={16} />
-						</Link>
-					</div>
-					<div className="card-grid">
-						{services.map((service) => (
-							<article className="feature-card" key={service.title}>
-								<h3>{service.title}</h3>
-								<p>{service.text}</p>
+						<div className="v3-buyer-grid">
+							<article>
+								<span>01</span>
+								<h3>Sri Lankan HNW families</h3>
+								<p>
+									They see continuity: Colombo credibility, tropical craft, and a
+									firm that can build a serious home without making the process
+									feel noisy.
+								</p>
 							</article>
-						))}
-					</div>
-				</div>
-			</section>
-
-			<section className="section" style={{ paddingTop: 0 }}>
-				<div className="container-site">
-					<div className="split" style={{ alignItems: "end", marginBottom: "2rem" }}>
-						<div>
-							<p className="eyebrow">Selected Works</p>
-							<h2 className="section-title">Proof through places.</h2>
-						</div>
-						<Link href="/gallery" className="btn btn-outline">
-							Open Gallery <ArrowUpRight size={16} />
-						</Link>
-					</div>
-					<div className="card-grid">
-						{projects.map((project) => (
-							<article className="project-card" key={project.title}>
-								<div className="project-image">
-									<Image src={project.img} alt={project.title} fill sizes="33vw" />
-								</div>
-								<div className="project-body">
-									<p className="eyebrow">{project.kicker}</p>
-									<h3>{project.title}</h3>
-								</div>
+							<article>
+								<span>02</span>
+								<h3>Foreign buyers and returnees</h3>
+								<p>
+									They read the cues of boutique hospitality, privacy, climate
+									intelligence and heritage without needing local construction
+									context.
+								</p>
 							</article>
-						))}
-					</div>
-				</div>
-			</section>
-
-			<section className="section dark-band">
-				<div className="container-site split">
-					<div>
-						<p className="eyebrow">Contact</p>
-						<h2 className="section-title">For homes, hotels, institutions and careful renovations.</h2>
-					</div>
-					<div>
-						<p className="lead">
-							Call +94 718 419 419 or +94 714 429 429, or email info@siem.lk.
-							Head office: 51/1, Gregory&apos;s Road, Colombo 07, Sri Lanka.
-						</p>
-						<div className="hero-actions">
-							<a href="tel:+94718419419" className="btn btn-light">
-								Call SIEM
-							</a>
-							<a href="mailto:info@siem.lk" className="btn btn-outline" style={{ color: "var(--paper)", borderColor: "rgba(248,244,236,0.5)" }}>
-								Email Brief
-							</a>
+							<article>
+								<span>03</span>
+								<h3>Architects overseas</h3>
+								<p>
+									They want a contractor who looks literate in drawings,
+									materials, sequencing and restraint. This site signals taste
+									before the first meeting.
+								</p>
+							</article>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+
+				<section className="v3-contact">
+					<div className="container-site v3-contact-grid">
+						<h2>Bring the architect. Bring the impossible site. Bring the old wall.</h2>
+						<div>
+							<p>
+								Head office: 51/1, Gregory&apos;s Road, Colombo 07, Sri Lanka.
+								<br />
+								Call +94 718 419 419 or +94 714 429 429.
+								<br />
+								Email info@siem.lk.
+							</p>
+							<div className="v3-actions">
+								<a href="mailto:info@siem.lk" className="btn btn-light">
+									Send the Brief
+								</a>
+								<a href="tel:+94718419419" className="btn btn-outline v3-outline">
+									Call Colombo
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
 			<SiteFooter />
 		</>
 	);
