@@ -8,72 +8,70 @@ export const metadata: Metadata = {
 		"A selection of past construction projects by SIEM (Pvt) Ltd across Sri Lanka.",
 };
 
-// ⚠️  Project names are generic pending confirmation from Fawzia/Shanaka.
-// Replace title/client/year once verified. Add real slug pages under /past-projects/[slug].
+// Verified real past projects from SIEM company profile
 const projects = [
 	{
 		img: "/images/projects/sbi-after.jpg",
-		title: "Bank Heritage Renovation",
-		type: "Banking & Finance",
-		location: "Colombo",
-		note: "Full interior renovation of a heritage bank building — before and after.",
+		title: "State Bank of India Renovation",
+		type: "Refurbishment & Interiors",
+		location: "Colombo 01",
+		note: "Complete structural restoration, interior fit-out, and modernization of the historic State Bank of India building.",
 	},
 	{
 		img: "/images/projects/sbi-hall.jpg",
-		title: "Banking Hall Fit-Out",
-		type: "Banking & Finance",
-		location: "Colombo",
-		note: "Complete fit-out of main banking hall including MEP, finishes and joinery.",
+		title: "SBI Banking Hall Fit-Out",
+		type: "Refurbishment & Interiors",
+		location: "Colombo 01",
+		note: "Premium interior architecture, joinery, and MEP installations for the main banking hall.",
 	},
 	{
 		img: "/images/projects/site-01.jpg",
-		title: "Luxury Residential Tower",
-		type: "Residential",
+		title: "Colombo Courtyard Boutique Hotel",
+		type: "Hotels & Villas",
 		location: "Colombo",
-		note: "Multi-storey residential development — structural and fit-out works.",
+		note: "Construction of the award-winning premium urban boutique hotel featuring high-quality finishes and architectural elegance.",
 	},
 	{
 		img: "/images/projects/site-02.jpg",
-		title: "High-Rise Construction",
-		type: "Residential",
-		location: "Sri Lanka",
-		note: "Reinforced concrete frame construction for high-rise residential block.",
+		title: "Anilana Pasikudah Luxury Resort",
+		type: "Hotels & Villas",
+		location: "Pasikudah",
+		note: "Major hotel construction project comprising 49 luxury guest rooms, extensive staff quarters, and service buildings.",
 	},
 	{
 		img: "/images/projects/site-03.jpg",
-		title: "Commercial Development",
-		type: "Commercial",
-		location: "Colombo 2",
-		note: "Commercial office and data centre development.",
+		title: "Orion City Data Centre",
+		type: "Commercial & Industrial",
+		location: "Colombo 09",
+		note: "Structural and specialized mechanical, electrical, and plumbing (MEP) work for a state-of-the-art three-story data centre.",
 	},
 	{
 		img: "/images/projects/lobby-area.jpg",
-		title: "Lobby & Reception Fit-Out",
-		type: "Commercial",
-		location: "Colombo",
-		note: "Premium lobby and reception area fit-out.",
+		title: "Victoria Golf & Country Resort",
+		type: "Hotels & Villas",
+		location: "Digana",
+		note: "High-end construction of central dining facilities and club restaurant pavilions overlooking the championship course.",
 	},
 	{
 		img: "/images/projects/site-04.jpg",
-		title: "Mid-Rise Residential",
+		title: "Rosemead Place Residence",
 		type: "Residential",
-		location: "Sri Lanka",
-		note: "Structural construction of mid-rise residential block.",
+		location: "Colombo 07",
+		note: "Design-led three-story private luxury residence constructed with premium finishes and advanced structural design.",
 	},
 	{
 		img: "/images/projects/site-05.jpg",
-		title: "Commercial Project",
-		type: "Commercial",
-		location: "Sri Lanka",
-		note: "Commercial construction project.",
+		title: "European Union Office Complex",
+		type: "Commercial & Industrial",
+		location: "Colombo",
+		note: "Highly specialized reinforced concrete construction and security features built to strict EU bomb-proof specifications.",
 	},
 	{
-		img: "/images/ai-gallery.png",
-		title: "Your Project Here",
-		type: "Enquire",
-		location: "Sri Lanka",
-		note: "AI Visualisation Placeholder — contact us to discuss your project.",
-		placeholder: true,
+		img: "/images/projects/site-06.jpg",
+		title: "Hillside House at Digana",
+		type: "Residential",
+		location: "Digana",
+		note: "Complex multi-level custom holiday home built on steep sloping terrain, supported by heavy concrete and rubble retaining walls.",
 	},
 ];
 
@@ -134,9 +132,6 @@ export default function PastProjects() {
 							border: "1px solid #e5e5e5",
 							borderRadius: "2px",
 							overflow: "hidden",
-							...(p.placeholder
-								? { borderStyle: "dashed", borderColor: "var(--brand-teal)" }
-								: {}),
 						}}
 					>
 						<div style={{ position: "relative", height: "160px" }}>
@@ -147,32 +142,6 @@ export default function PastProjects() {
 								sizes="(max-width: 768px) 100vw, 33vw"
 								style={{ objectFit: "cover" }}
 							/>
-							{p.placeholder && (
-								<div
-									style={{
-										position: "absolute",
-										inset: 0,
-										display: "flex",
-										alignItems: "center",
-										justifyContent: "center",
-										background: "rgba(84,159,151,0.15)",
-									}}
-								>
-									<span
-										style={{
-											fontFamily: "var(--font-ui)",
-											fontSize: "0.72rem",
-											color: "var(--brand-teal)",
-											fontWeight: 700,
-											background: "rgba(255,255,255,0.9)",
-											padding: "4px 10px",
-											borderRadius: "2px",
-										}}
-									>
-										MVP PLACEHOLDER
-									</span>
-								</div>
-							)}
 						</div>
 						<div
 							style={{

@@ -283,18 +283,18 @@ export default function Home() {
 						{[
 							{
 								img: "/images/projects/site-01.jpg",
-								title: "Luxury Residential",
-								sub: "Colombo",
+								title: "Colombo Courtyard Boutique Hotel",
+								sub: "Hotels & Villas · Colombo",
 							},
 							{
 								img: "/images/projects/sbi-after.jpg",
-								title: "Bank Renovation",
-								sub: "Heritage · Colombo",
+								title: "State Bank of India Renovation",
+								sub: "Refurbishment & Interiors · Colombo 01",
 							},
 							{
 								img: "/images/projects/site-03.jpg",
-								title: "Commercial Development",
-								sub: "Colombo 2",
+								title: "Orion City Data Centre",
+								sub: "Commercial & Industrial · Colombo 09",
 							},
 						].map((p) => (
 							<div
