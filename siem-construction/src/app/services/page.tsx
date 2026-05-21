@@ -32,6 +32,10 @@ const services = [
 		title: "Infrastructure Works",
 		desc: "Site infrastructure including drainage, roads, external works, and utilities. We provide a comprehensive service from advisory work to final construction.",
 	},
+	{
+		title: "Hospitality Linen Procurement",
+		desc: "Value-focused FF&E sourcing and dynamic supplier evaluation. We help commercial hotel and residential clients analyze thread counts and split orders to optimize budgets across top manufacturers (Alankara, Bedsheets Paradise, and Raawana Bedding).",
+	},
 ];
 
 export default function Services() {
@@ -71,6 +75,61 @@ export default function Services() {
 				second to none. Thanks to our all-round engineering experience, we offer
 				a complete service from advisory work to final construction.
 			</p>
+
+			{/* Interactive Estimator Quick-Link Banner */}
+			<div
+				style={{
+					background: "linear-gradient(135deg, var(--brand-teal-light), #fff)",
+					border: "1.5px solid var(--brand-teal)",
+					borderRadius: "4px",
+					padding: "1.5rem",
+					marginBottom: "2.5rem",
+					display: "flex",
+					flexDirection: "column",
+					gap: "1rem",
+					position: "relative",
+					overflow: "hidden",
+				}}
+			>
+				<div style={{ position: "absolute", right: "-10px", bottom: "-10px", fontSize: "5rem", opacity: 0.1, pointerEvents: "none" }}>
+					🛏️
+				</div>
+				<span style={{
+					fontFamily: "var(--font-ui)",
+					fontSize: "0.7rem",
+					fontWeight: 700,
+					color: "var(--brand-teal-dark)",
+					textTransform: "uppercase",
+					letterSpacing: "0.15em"
+				}}>
+					Interactive Sourcing Tool
+				</span>
+				<h3 style={{
+					fontFamily: "var(--font-display)",
+					fontSize: "1.2rem",
+					color: "var(--brand-navy)",
+					margin: 0
+				}}>
+					Hospitality Sourcing & Bed/Bath Linen Price Estimator
+				</h3>
+				<p style={{
+					fontFamily: "var(--font-ui)",
+					fontSize: "0.82rem",
+					color: "var(--brand-body)",
+					margin: 0,
+					lineHeight: 1.7
+				}}>
+					Compare quotes from leading local manufacturers (**Alankara Designs**, **Bedsheets Paradise**, and **Raawana Bedding**) across standard and luxury thread counts. Use our smart split-sourcing recommendations to save up to 25% on your project's FF&E budget.
+				</p>
+				<div>
+					<a
+						href="/services/linen-procurement"
+						className="btn-brand-teal"
+					>
+						Launch Sourcing Calculator →
+					</a>
+				</div>
+			</div>
 			<div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
 				{services.map((s, i) => (
 					<div

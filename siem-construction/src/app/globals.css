@@ -200,6 +200,25 @@ h3 {
 	box-shadow: 0 8px 25px rgba(13, 79, 79, 0.4);
 }
 
+.btn-brand-teal {
+	display: inline-flex;
+	align-items: center;
+	background: var(--brand-teal);
+	color: #fff;
+	padding: 0.6rem 1.2rem;
+	font-size: 0.78rem;
+	font-weight: 600;
+	font-family: var(--font-ui);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	text-decoration: none;
+	border-radius: 2px;
+	transition: background 0.2s;
+}
+.btn-brand-teal:hover {
+	background: var(--brand-teal-dark);
+}
+
 /* ─── CARD SYSTEM ──────────────────────────────────────────────── */
 .card-service {
 	background: var(--white);
