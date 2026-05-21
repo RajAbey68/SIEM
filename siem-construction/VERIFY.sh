@@ -7,7 +7,8 @@
 # Correct pattern: grep -r "100\|Retention" src/
 
 set -e
-cd /Users/arajiv/SIEM/siem-construction
+# Path auto-configured
+
 
 echo "========================================"
 echo " SIEM CODEBASE VERIFICATION"
