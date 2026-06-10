@@ -4,17 +4,17 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 const galleryImages = [
-	{ src: "/images/projects/site-01.jpg", alt: "Colombo Courtyard Boutique Hotel" },
-	{ src: "/images/projects/site-02.jpg", alt: "Anilana Pasikudah Luxury Resort" },
-	{ src: "/images/projects/site-03.jpg", alt: "Orion City Data Centre" },
-	{ src: "/images/projects/site-04.jpg", alt: "Rosemead Place Residence" },
-	{ src: "/images/projects/site-05.jpg", alt: "European Union Office Complex" },
-	{ src: "/images/projects/site-06.jpg", alt: "Hillside House at Digana" },
-	{ src: "/images/projects/site-07.jpg", alt: "Reinforced Concrete Framing Construction" },
-	{ src: "/images/projects/sbi-after.jpg", alt: "State Bank of India Renovation - After" },
-	{ src: "/images/projects/sbi-before.jpg", alt: "State Bank of India - Before Renovation" },
-	{ src: "/images/projects/sbi-hall.jpg", alt: "SBI Banking Hall Fit-Out" },
-	{ src: "/images/projects/lobby-area.jpg", alt: "Victoria Golf & Country Resort Dining" },
+	{ src: "/images/projects/site-01.jpg", alt: "Wrey House, Pokulukanda" },
+	{ src: "/images/projects/site-02.jpg", alt: "Prima Apartments, Colombo" },
+	{ src: "/images/projects/site-03.jpg", alt: "Building, Bagatalle Road, Colombo 3" },
+	{ src: "/images/projects/site-04.jpg", alt: "Houses in Mirihana & Wadduwa" },
+	{ src: "/images/projects/site-05.jpg", alt: "Hayley’s House, Galle Fort" },
+	{ src: "/images/projects/site-06.jpg", alt: "South Point Villa, Kathaluwa" },
+	{ src: "/images/projects/site-07.jpg", alt: "Boutique Hotel, Ravana Gardens" },
+	{ src: "/images/projects/sbi-after.jpg", alt: "State Bank of India Building (After Renovation)" },
+	{ src: "/images/projects/sbi-before.jpg", alt: "State Bank of India Building (Before Renovation)" },
+	{ src: "/images/projects/sbi-hall.jpg", alt: "7th Floor, Cinnamon Lakeside Refurbishment" },
+	{ src: "/images/projects/lobby-area.jpg", alt: "Colombo Swimming Club Refurbishment" },
 	{ src: "/images/ai-gallery.png", alt: "AI Visualisation Placeholder" },
 ];
 
