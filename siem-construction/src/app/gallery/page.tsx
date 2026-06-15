@@ -4,11 +4,17 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 const galleryImages = [
+	{ src: "/images/projects/anilana-pasikudah.jpg", alt: "Anilana, Pasikudah" },
+	{ src: "/images/projects/ravana-gardens.jpg", alt: "Boutique Hotel, Ravana Gardens" },
 	{ src: "/images/projects/house-digana.jpg", alt: "House, Digana" },
+	{ src: "/images/projects/colombo-courtyard.jpg", alt: "Colombo Courtyard" },
+	{ src: "/images/projects/swimming-club.jpg", alt: "Colombo Swimming Club" },
 	{ src: "/images/projects/hayleys-house.jpg", alt: "Hayley's House, Galle Fort" },
 	{ src: "/images/projects/cinnamon-lakeside-7th.jpg", alt: "7th Floor, Cinnamon Lakeside" },
 	{ src: "/images/projects/prima-apartments.jpg", alt: "Prima Apartments, Colombo" },
 	{ src: "/images/projects/cinnamon-lakeside.jpg", alt: "Cinnamon Lakeside, Colombo" },
+	{ src: "/images/projects/victoria-golf.jpg", alt: "Victoria Golf Course" },
+	{ src: "/images/projects/wrey-house.jpg", alt: "Wrey House" },
 	{ src: "/images/projects/south-point-villa.jpg", alt: "South Point Villa, Kathaluwa" },
 	{ src: "/images/projects/bagatalle-road.jpg", alt: "Building, Bagatalle Road, Colombo" },
 	{ src: "/images/projects/mirihana-house.jpg", alt: "House in Mirihana" },

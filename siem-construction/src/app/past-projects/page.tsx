@@ -19,6 +19,20 @@ interface ProjectItem {
 
 const projects: ProjectItem[] = [
 	{
+		img: "/images/projects/anilana-pasikudah.jpg",
+		title: "Anilana, Pasikudah",
+		type: "Hospitality",
+		location: "Pasikudah",
+		note: "Construction of a 49-room luxury beachfront hotel, including staff facilities and service buildings. Designed by Mano Ponniah Associates.",
+	},
+	{
+		img: "/images/projects/ravana-gardens.jpg",
+		title: "Boutique Hotel, Ravana Gardens",
+		type: "Boutique Hospitality",
+		location: "Ussangoda",
+		note: "Sustainable luxury eco-boutique hotel construction on the coastal cliffs of Ussangoda. Designed by Ms. Sunela Jayewardene.",
+	},
+	{
 		img: "/images/projects/house-digana.jpg",
 		title: "House, Digana",
 		type: "Residential",
@@ -26,18 +40,32 @@ const projects: ProjectItem[] = [
 		note: "Construction of a three-level private house on sloping land, featuring concrete and rubble retaining walls. Designed by MICD Associates.",
 	},
 	{
+		img: "/images/projects/colombo-courtyard.jpg",
+		title: "Colombo Courtyard",
+		type: "Boutique Hospitality",
+		location: "Colombo 03",
+		note: "Construction of a unique urban boutique hotel featuring recycled materials and industrial aesthetics. Designed by Ms. Sunela Jayewardene.",
+	},
+	{
+		img: "/images/projects/swimming-club.jpg",
+		title: "Colombo Swimming Club",
+		type: "Leisure & Hospitality",
+		location: "Colombo 03",
+		note: "Construction of a new changing room and fine-dining restaurant at the historic Colombo Swimming Club. Designed by Ms. Ruchi Jeyanathan.",
+	},
+	{
 		img: "/images/projects/hayleys-house.jpg",
 		title: "Hayley’s House",
 		type: "Heritage Residential",
 		location: "Galle Fort",
-		note: "Restoration and extensions to Hayley's House, Galle Fort. Designed by Taru IE.",
+		note: "Restoration and structural extensions to Hayley's House in the UNESCO-listed Galle Fort. Designed by Taru IE.",
 	},
 	{
 		img: "/images/projects/cinnamon-lakeside-7th.jpg",
 		title: "7th Floor, Cinnamon Lakeside",
 		type: "Hospitality Fit-Out",
 		location: "Colombo",
-		note: "Additions and refurbishment of the 7th Floor (Executive Floor) and the 7 Degrees Terrace Bar & Restaurants. Designed by Taru IE.",
+		note: "Additions and complete luxury refurbishment of the Executive Floor lounge and suites. Designed by Taru IE.",
 	},
 	{
 		img: "/images/projects/prima-apartments.jpg",
@@ -51,14 +79,28 @@ const projects: ProjectItem[] = [
 		title: "Cinnamon Lakeside",
 		type: "Hospitality Fit-Out",
 		location: "Colombo",
-		note: "Renovation of 7 Degrees Terrace Bar and Restaurants at Cinnamon Lakeside Hotel. Designed by Taru IE.",
+		note: "Renovation of the 7 Degrees Terrace Bar and Restaurants at the Cinnamon Lakeside Hotel. Designed by Taru IE.",
+	},
+	{
+		img: "/images/projects/victoria-golf.jpg",
+		title: "Victoria Golf Course",
+		type: "Leisure & Hospitality",
+		location: "Digana",
+		note: "Refurbishment and additions to the clubhouse and premium villas at the Victoria Golf Course.",
+	},
+	{
+		img: "/images/projects/wrey-house.jpg",
+		title: "Wrey House",
+		type: "Tropical Villa",
+		location: "Pokulukanda",
+		note: "Custom tropical modern residence designed by Sunela Jayawardena, integrating steel, stone, and timber on a hillside site.",
 	},
 	{
 		img: "/images/projects/south-point-villa.jpg",
 		title: "South Point Villa",
 		type: "Boutique Villa",
 		location: "Kathaluwa",
-		note: "Construction of a beachfront boutique villa in Kathaluwa. Designed by Mr. C. Anjalendran.",
+		note: "Construction of a beachfront boutique villa featuring traditional courtyard layouts. Designed by Mr. C. Anjalendran.",
 	},
 	{
 		img: "/images/projects/bagatalle-road.jpg",
@@ -72,14 +114,14 @@ const projects: ProjectItem[] = [
 		title: "House in Mirihana",
 		type: "Residential",
 		location: "Mirihana",
-		note: "Construction of a private house in Mirihana. Designed by Mr. Indika Samarasinghe.",
+		note: "Construction of a private house on a sloping site. Designed by Mr. Indika Samarasinghe.",
 	},
 	{
 		img: "/images/projects/amarasekara-house.jpg",
 		title: "Amarasekara House",
 		type: "Residential",
 		location: "Wadduwa",
-		note: "Construction of the Amarasekara House and residential houses in Wadduwa. Designed by 1:2:4 Design.",
+		note: "Construction of a residential house focusing on tropical modernism. Designed by 1:2:4 Design.",
 	},
 	{
 		img: "/images/projects/state-bank.jpg",
