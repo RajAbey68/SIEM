@@ -4,18 +4,17 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 const galleryImages = [
-	{ src: "/images/projects/site-01.jpg", alt: "Wrey House, Pokulukanda" },
-	{ src: "/images/projects/site-02.jpg", alt: "Prima Apartments, Colombo" },
-	{ src: "/images/projects/site-03.jpg", alt: "Building, Bagatalle Road, Colombo 3" },
-	{ src: "/images/projects/site-04.jpg", alt: "Houses in Mirihana & Wadduwa" },
-	{ src: "/images/projects/site-05.jpg", alt: "Hayley’s House, Galle Fort" },
-	{ src: "/images/projects/site-06.jpg", alt: "South Point Villa, Kathaluwa" },
-	{ src: "/images/projects/site-07.jpg", alt: "Boutique Hotel, Ravana Gardens" },
-	{ src: "/images/projects/sbi-after.jpg", alt: "State Bank of India Building (After Renovation)" },
-	{ src: "/images/projects/sbi-before.jpg", alt: "State Bank of India Building (Before Renovation)" },
-	{ src: "/images/projects/sbi-hall.jpg", alt: "7th Floor, Cinnamon Lakeside Refurbishment" },
-	{ src: "/images/projects/lobby-area.jpg", alt: "Colombo Swimming Club Refurbishment" },
-	{ src: "/images/ai-gallery.png", alt: "AI Visualisation Placeholder" },
+	{ src: "/images/projects/house-digana.jpg", alt: "House, Digana" },
+	{ src: "/images/projects/hayleys-house.jpg", alt: "Hayley's House, Galle Fort" },
+	{ src: "/images/projects/cinnamon-lakeside-7th.jpg", alt: "7th Floor, Cinnamon Lakeside" },
+	{ src: "/images/projects/prima-apartments.jpg", alt: "Prima Apartments, Colombo" },
+	{ src: "/images/projects/cinnamon-lakeside.jpg", alt: "Cinnamon Lakeside, Colombo" },
+	{ src: "/images/projects/south-point-villa.jpg", alt: "South Point Villa, Kathaluwa" },
+	{ src: "/images/projects/bagatalle-road.jpg", alt: "Building, Bagatalle Road, Colombo" },
+	{ src: "/images/projects/mirihana-house.jpg", alt: "House in Mirihana" },
+	{ src: "/images/projects/amarasekara-house.jpg", alt: "Amarasekara House, Wadduwa" },
+	{ src: "/images/projects/state-bank.jpg", alt: "State Bank of India Building, Colombo" },
+	{ src: "/images/projects/braganza-villa.jpg", alt: "Braganza Villa, Talpe" },
 ];
 
 export default function Gallery() {
@@ -32,8 +31,7 @@ export default function Gallery() {
 					fontSize: "0.88rem",
 				}}
 			>
-				A selection of images from our projects across Sri Lanka. Images marked{" "}
-				<em>AI Visualisation</em> are placeholders pending real photography.
+				A selection of photographs from our construction and renovation projects across Sri Lanka.
 			</p>
 			<div
 				style={{

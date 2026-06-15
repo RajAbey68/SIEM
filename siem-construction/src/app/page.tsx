@@ -282,19 +282,19 @@ export default function Home() {
 					>
 						{[
 							{
-								img: "/images/projects/site-07.jpg",
-								title: "Boutique Hotel, Ravana Gardens",
-								sub: "Hospitality · Ussangoda",
-							},
-							{
-								img: "/images/projects/sbi-after.jpg",
+								img: "/images/projects/state-bank.jpg",
 								title: "State Bank of India",
-								sub: "Heritage · Colombo 1",
+								sub: "Heritage · Colombo 01",
 							},
 							{
-								img: "/images/projects/site-01.jpg",
-								title: "Wrey House",
-								sub: "Tropical Villa · Pokulukanda",
+								img: "/images/projects/cinnamon-lakeside-7th.jpg",
+								title: "7th Floor, Cinnamon Lakeside",
+								sub: "Hospitality Fit-Out · Colombo",
+							},
+							{
+								img: "/images/projects/house-digana.jpg",
+								title: "House, Digana",
+								sub: "Residential · Digana",
 							},
 						].map((p) => (
 							<div
