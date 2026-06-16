@@ -229,14 +229,14 @@ export default function PageLayout({
 							>
 								SIEM (Pvt) Ltd
 								<br />
-								51/1, Gregory&apos;s Road,
+								113/16, Nawala Road,
 								<br />
-								Colombo 07, Sri Lanka.
+								Nugegoda, Sri Lanka.
 								<br />
 								<br />
-								+94 718 419 419
+								+94 11 4513 327
 								<br />
-								+94 714 429 429
+								+94 11 4513 328
 								<br />
 								info@siem.lk
 							</p>

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
 	title: "Contact Us | SIEM",
 	description:
-		"Get in touch with SIEM (Pvt) Ltd — 51/1, Gregory's Road, Colombo 07, Sri Lanka.",
+		"Get in touch with SIEM (Pvt) Ltd — 113/16, Nawala Road, Nugegoda, Sri Lanka.",
 };
 
 export default function ContactUs() {
@@ -44,115 +45,128 @@ export default function ContactUs() {
 				below.
 			</p>
 			<div
-				style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}
+				style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}
 				className="contact-detail-grid"
 			>
-				<div>
-					<h3
-						style={{
-							fontFamily: "var(--font-display)",
-							fontSize: "1rem",
-							color: "#333",
-							marginBottom: "1rem",
-							paddingBottom: "0.5rem",
-							borderBottom: "2px solid var(--brand-teal)",
-						}}
-					>
-						Head Office
-					</h3>
-					<address
-						style={{
-							fontStyle: "normal",
-							fontFamily: "var(--font-ui)",
-							fontSize: "0.88rem",
-							color: "var(--brand-body)",
-							lineHeight: 2,
-						}}
-					>
-						SIEM (Pvt) Ltd
-						<br />
-						51/1, Gregory&apos;s Road
-						<br />
-						Colombo 07
-						<br />
-						Sri Lanka
-						<br />
-						<br />
-						<strong>Tel:</strong>{" "}
-						<a
-							href="tel:+94718419419"
-							style={{ color: "var(--brand-teal)", textDecoration: "none" }}
+				{/* Left Column: Head Office & Office Hours */}
+				<div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+					<div>
+						<h3
+							style={{
+								fontFamily: "var(--font-display)",
+								fontSize: "1rem",
+								color: "#333",
+								marginBottom: "1rem",
+								paddingBottom: "0.5rem",
+								borderBottom: "2px solid var(--brand-teal)",
+							}}
 						>
-							+94 718 419 419
-						</a>
-						<br />
-						<strong>Tel:</strong>{" "}
-						<a
-							href="tel:+94714429429"
-							style={{ color: "var(--brand-teal)", textDecoration: "none" }}
+							Head Office
+						</h3>
+						<address
+							style={{
+								fontStyle: "normal",
+								fontFamily: "var(--font-ui)",
+								fontSize: "0.88rem",
+								color: "var(--brand-body)",
+								lineHeight: 2,
+							}}
 						>
-							+94 714 429 429
-						</a>
-						<br />
-						<strong>Email:</strong>{" "}
-						<a
-							href="mailto:info@siem.lk"
-							style={{ color: "var(--brand-teal)", textDecoration: "none" }}
+							SIEM (Pvt) Ltd
+							<br />
+							113/16, Nawala Road
+							<br />
+							Nugegoda
+							<br />
+							Sri Lanka
+							<br />
+							<br />
+							<strong>Tel:</strong>{" "}
+							<a
+								href="tel:+94114513327"
+								style={{ color: "var(--brand-teal)", textDecoration: "none" }}
+							>
+								+94 11 4513 327
+							</a>
+							<br />
+							<strong>Tel:</strong>{" "}
+							<a
+								href="tel:+94114513328"
+								style={{ color: "var(--brand-teal)", textDecoration: "none" }}
+							>
+								+94 11 4513 328
+							</a>
+							<br />
+							<strong>Fax:</strong> +94 11 285 6111
+							<br />
+							<strong>Email:</strong>{" "}
+							<a
+								href="mailto:info@siem.lk"
+								style={{ color: "var(--brand-teal)", textDecoration: "none" }}
+							>
+								info@siem.lk
+							</a>
+						</address>
+					</div>
+
+					<div>
+						<h3
+							style={{
+								fontFamily: "var(--font-display)",
+								fontSize: "1rem",
+								color: "#333",
+								marginBottom: "1rem",
+								paddingBottom: "0.5rem",
+								borderBottom: "2px solid var(--brand-teal)",
+							}}
 						>
-							info@siem.lk
-						</a>
-					</address>
+							Office Hours
+						</h3>
+						<table
+							style={{
+								fontFamily: "var(--font-ui)",
+								fontSize: "0.85rem",
+								color: "var(--brand-body)",
+								borderCollapse: "collapse",
+								width: "100%",
+							}}
+						>
+							<tbody>
+								{[
+									["Monday – Friday", "8:00 AM – 5:00 PM"],
+									["Saturday", "8:00 AM – 1:00 PM"],
+									["Sunday", "Closed"],
+								].map(([day, hours]) => (
+									<tr key={day} style={{ borderBottom: "1px solid #f0f0f0" }}>
+										<td
+											style={{
+												padding: "0.6rem 0",
+												fontWeight: 600,
+												color: "#333",
+											}}
+										>
+											{day}
+										</td>
+										<td style={{ padding: "0.6rem 0", color: "var(--brand-teal)" }}>
+											{hours}
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
 				</div>
+
+				{/* Right Column: Contact Form */}
 				<div>
-					<h3
-						style={{
-							fontFamily: "var(--font-display)",
-							fontSize: "1rem",
-							color: "#333",
-							marginBottom: "1rem",
-							paddingBottom: "0.5rem",
-							borderBottom: "2px solid var(--brand-teal)",
-						}}
-					>
-						Office Hours
-					</h3>
-					<table
-						style={{
-							fontFamily: "var(--font-ui)",
-							fontSize: "0.85rem",
-							color: "var(--brand-body)",
-							borderCollapse: "collapse",
-							width: "100%",
-						}}
-					>
-						{[
-							["Monday – Friday", "8:00 AM – 5:00 PM"],
-							["Saturday", "8:00 AM – 1:00 PM"],
-							["Sunday", "Closed"],
-						].map(([day, hours]) => (
-							<tr key={day} style={{ borderBottom: "1px solid #f0f0f0" }}>
-								<td
-									style={{
-										padding: "0.6rem 0",
-										fontWeight: 600,
-										color: "#333",
-									}}
-								>
-									{day}
-								</td>
-								<td style={{ padding: "0.6rem 0", color: "var(--brand-teal)" }}>
-									{hours}
-								</td>
-							</tr>
-						))}
-					</table>
+					<ContactForm />
 				</div>
 			</div>
 
 			{/* Map embed */}
 			<div
 				style={{
-					marginTop: "2rem",
+					marginTop: "2.5rem",
 					border: "1px solid #e5e5e5",
 					borderRadius: "2px",
 					overflow: "hidden",
@@ -179,9 +193,9 @@ export default function ContactUs() {
 					fontStyle: "italic",
 				}}
 			>
-				51/1, Gregory&apos;s Road, Colombo 07, Sri Lanka
+				113/16, Nawala Road, Nugegoda, Sri Lanka
 			</p>
-			<style>{`@media (max-width: 600px) { .contact-detail-grid { grid-template-columns: 1fr !important; } }`}</style>
+			<style>{`@media (max-width: 768px) { .contact-detail-grid { grid-template-columns: 1fr !important; } }`}</style>
 		</PageLayout>
 	);
 }
