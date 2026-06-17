@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
 	title: "Contact Us | SIEM",
 	description:
-		"Get in touch with SIEM (Pvt) Ltd — 113/16, Nawala Road, Nugegoda, Sri Lanka.",
+		"Get in touch with SIEM (Pvt) Ltd — 51/1, Gregory's Road, Colombo 07, Sri Lanka.",
 };
 
 export default function ContactUs() {
@@ -74,30 +74,28 @@ export default function ContactUs() {
 						>
 							SIEM (Pvt) Ltd
 							<br />
-							113/16, Nawala Road
+							51/1, Gregory&apos;s Road
 							<br />
-							Nugegoda
+							Colombo 07
 							<br />
 							Sri Lanka
 							<br />
 							<br />
 							<strong>Tel:</strong>{" "}
 							<a
-								href="tel:+94114513327"
+								href="tel:+94718419419"
 								style={{ color: "var(--brand-teal)", textDecoration: "none" }}
 							>
-								+94 11 4513 327
+								+94 718 419 419
 							</a>
 							<br />
 							<strong>Tel:</strong>{" "}
 							<a
-								href="tel:+94114513328"
+								href="tel:+94714429429"
 								style={{ color: "var(--brand-teal)", textDecoration: "none" }}
 							>
-								+94 11 4513 328
+								+94 714 429 429
 							</a>
-							<br />
-							<strong>Fax:</strong> +94 11 285 6111
 							<br />
 							<strong>Email:</strong>{" "}
 							<a
@@ -193,7 +191,7 @@ export default function ContactUs() {
 					fontStyle: "italic",
 				}}
 			>
-				113/16, Nawala Road, Nugegoda, Sri Lanka
+				51/1, Gregory&apos;s Road, Colombo 07, Sri Lanka
 			</p>
 			<style>{`@media (max-width: 768px) { .contact-detail-grid { grid-template-columns: 1fr !important; } }`}</style>
 		</PageLayout>

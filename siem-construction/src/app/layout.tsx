@@ -46,12 +46,12 @@ const jsonLd = {
 	"@type": "LocalBusiness",
 	name: "SIEM (Pvt) Ltd",
 	url: "https://siem-construction.vercel.app",
-	telephone: "+94114513327",
+	telephone: "+94718419419",
 	email: "info@siem.lk",
 	address: {
 		"@type": "PostalAddress",
-		streetAddress: "113/16, Nawala Road",
-		addressLocality: "Nugegoda",
+		streetAddress: "51/1, Gregory's Road",
+		addressLocality: "Colombo 07",
 		addressCountry: "LK",
 	},
 	geo: {

@@ -446,9 +446,9 @@ export default function Home() {
 								margin: 0,
 							}}
 						>
-							<strong>Tel:</strong> +94 11 4513 327
+							<strong>Tel:</strong> +94 718 419 419
 							<br />
-							<strong>Tel:</strong> +94 11 4513 328
+							<strong>Tel:</strong> +94 714 429 429
 							<br />
 							<strong>Email:</strong>{" "}
 							<a
@@ -534,14 +534,14 @@ export default function Home() {
 							>
 								SIEM (Pvt) Ltd
 								<br />
-								113/16, Nawala Road,
+								51/1, Gregory&apos;s Road,
 								<br />
-								Nugegoda, Sri Lanka.
+								Colombo 07, Sri Lanka.
 								<br />
 								<br />
-								+94 11 4513 327
+								+94 718 419 419
 								<br />
-								+94 11 4513 328
+								+94 714 429 429
 								<br />
 								info@siem.lk
 							</p>
