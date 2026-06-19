@@ -52,8 +52,8 @@ export default function Home() {
 						}}
 					>
 						<Image
-							src="/images/projects/site-01.jpg"
-							alt="SIEM — quality built for Sri Lanka"
+							src="/images/projects/anilana-pasikudah.jpg"
+							alt="Anilana Pasikudah construction by SIEM"
 							fill
 							sizes="(max-width: 768px) 100vw, 65vw"
 							style={{ objectFit: "cover" }}

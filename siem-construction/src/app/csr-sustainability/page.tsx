@@ -114,31 +114,69 @@ export default function CsrSustainability() {
 						))}
 					</div>
 
-					<div>
-						<Image
-							src="/images/ai-news-csr.png"
-							alt="Siem CSR activities — AI Visualisation Placeholder"
-							width={600}
-							height={420}
-							style={{
-								width: "100%",
-								height: "auto",
-								borderRadius: "4px",
-								marginBottom: "0.5rem",
-							}}
-						/>
+						<div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+							<div
+								style={{
+									position: "relative",
+									width: "100%",
+									height: "260px",
+									borderRadius: "3px",
+									overflow: "hidden",
+								}}
+							>
+								<Image
+									src="/images/csr/csr-1.jpg"
+									alt="SIEM CSR Activities - Community Support"
+									fill
+									style={{ objectFit: "cover" }}
+								/>
+							</div>
+							<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+								<div
+									style={{
+										position: "relative",
+										width: "100%",
+										height: "160px",
+										borderRadius: "3px",
+										overflow: "hidden",
+									}}
+								>
+									<Image
+										src="/images/csr/csr-2.jpg"
+										alt="SIEM CSR Activities - Worker Welfare"
+										fill
+										style={{ objectFit: "cover" }}
+									/>
+								</div>
+								<div
+									style={{
+										position: "relative",
+										width: "100%",
+										height: "160px",
+										borderRadius: "3px",
+										overflow: "hidden",
+									}}
+								>
+									<Image
+										src="/images/csr/csr-3.png"
+										alt="SIEM CSR Activities - Environmental Initiatives"
+										fill
+										style={{ objectFit: "cover" }}
+									/>
+								</div>
+							</div>
+						</div>
 						<p
 							style={{
 								fontSize: "0.72rem",
 								color: "var(--brand-body)",
 								fontFamily: "var(--font-ui)",
 								textAlign: "center",
-								fontStyle: "italic",
+								marginTop: "0.5rem",
 							}}
 						>
-							AI Visualisation · Placeholder — real CSR photos to be added
+							SIEM Corporate Social Responsibility & Community Development Initiatives
 						</p>
-					</div>
 				</div>
 			</div>
 			<style>{`@media (max-width: 768px) { .csr-grid { grid-template-columns: 1fr !important; } }`}</style>

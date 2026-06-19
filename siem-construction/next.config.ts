@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     // Allow locally hosted images in /public (default) + any external domains if needed later
     formats: ["image/avif", "image/webp"],
     // Serve smallest viable image: AVIF first, WebP fallback
@@ -11,28 +14,6 @@ const nextConfig: NextConfig = {
   },
   // Compress all responses
   compress: true,
-  // Power headers for global CDN
-  async headers() {
-    return [
-      {
-        source: "/images/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-        ],
-      },
-    ];
-  },
 };
 
 export default nextConfig;
