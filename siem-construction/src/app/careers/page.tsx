@@ -75,7 +75,7 @@ export default function Careers() {
 									marginBottom: "0.5rem",
 								}}
 							>
-								🚧 Vacancies — Coming Soon
+								Vacancies — Coming Soon
 							</h3>
 							<p
 								style={{
@@ -88,10 +88,10 @@ export default function Careers() {
 								We are currently updating our vacancies listing. In the
 								meantime, please send your CV to{" "}
 								<a
-									href="mailto:careers@siem-construction.vercel.app"
+									href="mailto:careers@siem.lk"
 									style={{ color: "var(--brand-teal)", fontWeight: 600 }}
 								>
-									careers@siem-construction.vercel.app
+									careers@siem.lk
 								</a>{" "}
 								with the role you are interested in.
 							</p>
@@ -132,24 +132,12 @@ export default function Careers() {
 					</div>
 					<div>
 						<Image
-							src="/images/ai-careers.png"
-							alt="SIEM office — AI Visualisation Placeholder"
+							src="/images/projects/siem-careers.jpg"
+							alt="SIEM — Join our team"
 							width={600}
 							height={400}
 							style={{ width: "100%", height: "auto", borderRadius: "4px" }}
 						/>
-						<p
-							style={{
-								marginTop: "0.5rem",
-								fontSize: "0.72rem",
-								color: "var(--brand-body)",
-								fontFamily: "var(--font-ui)",
-								textAlign: "center",
-								fontStyle: "italic",
-							}}
-						>
-							AI Visualisation · Placeholder — real office photo to be added
-						</p>
 					</div>
 				</div>
 			</div>

@@ -55,7 +55,7 @@ const projects: ProjectItem[] = [
 	},
 	{
 		img: "/images/projects/hayleys-house.jpg",
-		title: "Hayley’s House",
+		title: "Hayley's House",
 		type: "Heritage Residential",
 		location: "Galle Fort",
 		note: "Restoration and structural extensions to Hayley's House in the UNESCO-listed Galle Fort. Designed by Taru IE.",
@@ -136,6 +136,35 @@ const projects: ProjectItem[] = [
 		type: "Tropical Villa",
 		location: "Talpe",
 		note: "Construction of Braganza Villa in Talpe. Designed by E & A Interiors Singapore / Chloe Elkerton.",
+	},
+	// New projects from June 30 update
+	{
+		img: "/images/projects/ani-art-academies.jpg",
+		title: "Luxury House for Ani Art Academies",
+		type: "Luxury Residential",
+		location: "Dickwella",
+		note: "A 4,200 sqft luxury villa for Ani Art Academies, Dickwella. Designed by Architect Mrs. Roshan Sulaiman.",
+	},
+	{
+		img: "/images/projects/lolc-negombo.jpg",
+		title: "Office Building for LOLC",
+		type: "Commercial",
+		location: "Negombo",
+		note: "4-story office building for LOLC in Negombo. Designed by Mr. Dinuk Senanayake.",
+	},
+	{
+		img: "/images/projects/crystal-sands.png",
+		title: "Crystal Sands Apartments",
+		type: "Luxury Residential",
+		location: "Rathgama",
+		note: "11-story luxury apartment building in Rathgama. Designed by Mr. Jeremy Mather.",
+	},
+	{
+		img: "/images/projects/midigama-villa.jpg",
+		title: "Boutique Villa, Midigama",
+		type: "Boutique Hospitality",
+		location: "Weligama",
+		note: "Boutique villa at Midigama, Weligama. Designed by Ms. Sunela Jayewardene.",
 	},
 ];
 

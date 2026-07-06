@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Building2, Palette, Wrench, ClipboardList } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import QuickContact from "@/components/QuickContact";
 
@@ -177,7 +178,7 @@ export default function Home() {
 						))}
 					</div>
 
-					{/* Services preview */}
+					{/* Services preview — Lucide icons replacing emojis */}
 					<h3
 						style={{
 							fontFamily: "var(--font-display)",
@@ -200,29 +201,29 @@ export default function Home() {
 						className="services-mini"
 					>
 						{[
-							[
-								"🏗️",
-								"Civil Construction",
-								"Civil Construction and Structural Steel Buildings — Residential, commercial and institutional buildings.",
-							],
-							[
-								"🪨",
-								"Italian Tiles & Marble",
-								"Suppliers of Italian tiles and marble — agency to import best quality tiles and marble from Italy, customized per project.",
-							],
-							[
-								"🔧",
-								"Renovation & Retrofit",
-								"Occupied-space renovations, minimal disruption.",
-							],
-							[
-								"📐",
-								"Project Management",
-								"End-to-end oversight from feasibility to handover.",
-							],
-						].map(([icon, title, desc]) => (
+							{
+								icon: Building2,
+								title: "Civil Construction",
+								desc: "Civil Construction and Structural Steel Buildings — Residential, commercial and institutional buildings.",
+							},
+							{
+								icon: Palette,
+								title: "Italian Tiles & Marble",
+								desc: "Suppliers of Italian tiles and marble — agency to import best quality tiles and marble from Italy, customized per project.",
+							},
+							{
+								icon: Wrench,
+								title: "Renovation & Retrofit",
+								desc: "Occupied-space renovations, minimal disruption.",
+							},
+							{
+								icon: ClipboardList,
+								title: "Project Management",
+								desc: "End-to-end oversight from feasibility to handover.",
+							},
+						].map((item) => (
 							<div
-								key={title as string}
+								key={item.title}
 								style={{
 									padding: "1rem",
 									border: "1px solid #e5e5e5",
@@ -231,7 +232,7 @@ export default function Home() {
 								}}
 							>
 								<div style={{ fontSize: "1.4rem", marginBottom: "0.5rem" }}>
-									{icon}
+									<item.icon size={28} />
 								</div>
 								<h4
 									style={{
@@ -241,7 +242,7 @@ export default function Home() {
 										marginBottom: "0.3rem",
 									}}
 								>
-									{title as string}
+									{item.title}
 								</h4>
 								<p
 									style={{
@@ -252,7 +253,7 @@ export default function Home() {
 										lineHeight: 1.7,
 									}}
 								>
-									{desc as string}
+									{item.desc}
 								</p>
 							</div>
 						))}
@@ -529,21 +530,13 @@ export default function Home() {
 									fontSize: "0.82rem",
 									fontFamily: "var(--font-ui)",
 									lineHeight: 1.9,
-									margin: 0,
 								}}
 							>
-								SIEM (Pvt) Ltd
+								<strong>Tel:</strong> +94 718 419 419
 								<br />
-								51/1, Gregory&apos;s Road,
+								<strong>Tel:</strong> +94 714 429 429
 								<br />
-								Colombo 07, Sri Lanka.
-								<br />
-								<br />
-								+94 718 419 419
-								<br />
-								+94 714 429 429
-								<br />
-								info@siem.lk
+								<strong>Email:</strong> info@siem.lk
 							</p>
 						</div>
 						<div>
@@ -557,7 +550,7 @@ export default function Home() {
 									borderBottom: "2px solid var(--brand-teal)",
 								}}
 							>
-								About Siem
+								Office Hours
 							</h4>
 							<p
 								style={{
@@ -568,16 +561,16 @@ export default function Home() {
 									margin: 0,
 								}}
 							>
-								Established in 1993, SIEM is one of Sri Lanka&apos;s premier
-								civil construction firms, committed to delivering quality
-								solutions on time.
+								Mon — Fri: 8:00 AM – 5:00 PM
+								<br />
+								Saturday: 8:00 AM – 1:00 PM
 							</p>
 						</div>
 					</div>
 				</div>
 				<div
 					style={{
-						background: "var(--brand-footer-bar)",
+						background: "rgba(0,0,0,0.2)",
 						padding: "1rem 0",
 						textAlign: "center",
 					}}
@@ -585,26 +578,15 @@ export default function Home() {
 					<p
 						style={{
 							color: "rgba(255,255,255,0.4)",
-							fontSize: "0.78rem",
+							fontSize: "0.75rem",
 							fontFamily: "var(--font-ui)",
 							margin: 0,
 						}}
 					>
-						Copyright {new Date().getFullYear()} — SIEM (Pvt) Ltd · All Rights
-						Reserved
+						© {new Date().getFullYear()} SIEM (Pvt) Ltd. All rights reserved.
 					</p>
 				</div>
 			</footer>
-
-			<style>{`
-        @media (max-width: 768px) {
-          .home-body { grid-template-columns: 1fr !important; }
-          .footer-grid { grid-template-columns: 1fr !important; }
-          .stats-row { grid-template-columns: repeat(2,1fr) !important; }
-          .services-mini { grid-template-columns: 1fr !important; }
-          .projects-mini { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
 		</>
 	);
 }

@@ -126,24 +126,12 @@ export default function AboutUs() {
 						}}
 					>
 						<Image
-							src="/images/ai-about-team.png"
-							alt="SIEM team — AI Visualisation Placeholder"
+							src="/images/projects/house-digana.jpg"
+							alt="House, Digana — a residential project by SIEM"
 							width={600}
 							height={400}
 							style={{ width: "100%", height: "auto", borderRadius: "4px" }}
 						/>
-						<div
-							style={{
-								marginTop: "0.5rem",
-								fontSize: "0.72rem",
-								color: "var(--brand-body)",
-								fontFamily: "var(--font-ui)",
-								textAlign: "center",
-								fontStyle: "italic",
-							}}
-						>
-							AI Visualisation · Placeholder image — real team photo to be added
-						</div>
 					</div>
 				</div>
 			</div>

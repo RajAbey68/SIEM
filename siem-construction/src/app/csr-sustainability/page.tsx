@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Leaf, HardHat, Home, FileText } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
@@ -52,22 +53,22 @@ export default function CsrSustainability() {
 
 						{[
 							{
-								icon: "🌱",
+								icon: Leaf,
 								title: "Environment",
 								text: "We actively pursue green building practices, material waste reduction, and responsible sourcing on all our project sites.",
 							},
 							{
-								icon: "👷",
+								icon: HardHat,
 								title: "Worker Welfare",
 								text: "Stringent health and safety standards, fair wages and continuous skills training for all our workers and subcontractors.",
 							},
 							{
-								icon: "🏘️",
+								icon: Home,
 								title: "Community",
 								text: "We invest in the communities surrounding our project sites through education sponsorship, local hiring, and infrastructure support.",
 							},
 							{
-								icon: "📋",
+								icon: FileText,
 								title: "Governance",
 								text: "Transparent reporting, ethical procurement and ISO-aligned quality management systems across all operations.",
 							},
@@ -84,8 +85,8 @@ export default function CsrSustainability() {
 									borderRadius: "3px",
 								}}
 							>
-								<div style={{ fontSize: "1.5rem", lineHeight: 1 }}>
-									{item.icon}
+								<div style={{ fontSize: "1.5rem", lineHeight: 1, color: "var(--brand-teal)" }}>
+									<item.icon size={28} />
 								</div>
 								<div>
 									<h4
@@ -114,69 +115,69 @@ export default function CsrSustainability() {
 						))}
 					</div>
 
-						<div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+					<div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+						<div
+							style={{
+								position: "relative",
+								width: "100%",
+								height: "260px",
+								borderRadius: "3px",
+								overflow: "hidden",
+							}}
+						>
+							<Image
+								src="/images/csr/csr-1.jpg"
+								alt="SIEM CSR Activities - Community Support"
+								fill
+								style={{ objectFit: "cover" }}
+							/>
+						</div>
+						<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
 							<div
 								style={{
 									position: "relative",
 									width: "100%",
-									height: "260px",
+									height: "160px",
 									borderRadius: "3px",
 									overflow: "hidden",
 								}}
 							>
 								<Image
-									src="/images/csr/csr-1.jpg"
-									alt="SIEM CSR Activities - Community Support"
+									src="/images/csr/csr-2.jpg"
+									alt="SIEM CSR Activities - Worker Welfare"
 									fill
 									style={{ objectFit: "cover" }}
 								/>
 							</div>
-							<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-								<div
-									style={{
-										position: "relative",
-										width: "100%",
-										height: "160px",
-										borderRadius: "3px",
-										overflow: "hidden",
-									}}
-								>
-									<Image
-										src="/images/csr/csr-2.jpg"
-										alt="SIEM CSR Activities - Worker Welfare"
-										fill
-										style={{ objectFit: "cover" }}
-									/>
-								</div>
-								<div
-									style={{
-										position: "relative",
-										width: "100%",
-										height: "160px",
-										borderRadius: "3px",
-										overflow: "hidden",
-									}}
-								>
-									<Image
-										src="/images/csr/csr-3.png"
-										alt="SIEM CSR Activities - Environmental Initiatives"
-										fill
-										style={{ objectFit: "cover" }}
-									/>
-								</div>
+							<div
+								style={{
+									position: "relative",
+									width: "100%",
+									height: "160px",
+									borderRadius: "3px",
+									overflow: "hidden",
+								}}
+							>
+								<Image
+									src="/images/csr/csr-3.png"
+									alt="SIEM CSR Activities - Environmental Initiatives"
+									fill
+									style={{ objectFit: "cover" }}
+								/>
 							</div>
 						</div>
-						<p
-							style={{
-								fontSize: "0.72rem",
-								color: "var(--brand-body)",
-								fontFamily: "var(--font-ui)",
-								textAlign: "center",
-								marginTop: "0.5rem",
-							}}
-						>
-							SIEM Corporate Social Responsibility & Community Development Initiatives
-						</p>
+					</div>
+					<p
+						style={{
+							fontSize: "0.72rem",
+							color: "var(--brand-body)",
+							fontFamily: "var(--font-ui)",
+							textAlign: "center",
+							marginTop: "0.5rem",
+						}}
+					>
+						SIEM Corporate Social Responsibility & Community Development Initiatives
+					</p>
 				</div>
 			</div>
 			<style>{`@media (max-width: 768px) { .csr-grid { grid-template-columns: 1fr !important; } }`}</style>

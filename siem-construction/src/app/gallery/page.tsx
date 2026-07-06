@@ -21,6 +21,24 @@ const galleryImages = [
 	{ src: "/images/projects/amarasekara-house.jpg", alt: "Amarasekara House, Wadduwa" },
 	{ src: "/images/projects/state-bank.jpg", alt: "State Bank of India Building, Colombo" },
 	{ src: "/images/projects/braganza-villa.jpg", alt: "Braganza Villa, Talpe" },
+	{ src: "/images/projects/ani-art-academies.jpg", alt: "Luxury House for Ani Art Academies, Dickwella" },
+	{ src: "/images/projects/lolc-negombo.jpg", alt: "Office Building for LOLC, Negombo" },
+	{ src: "/images/projects/crystal-sands.png", alt: "Crystal Sands Apartments, Rathgama" },
+	{ src: "/images/projects/midigama-villa.jpg", alt: "Boutique Villa, Midigama" },
+	// New gallery additions from June 30 update
+	{ src: "/images/gallery/gallery-new-01.png", alt: "SIEM Project Gallery 01" },
+	{ src: "/images/gallery/gallery-new-02.jpg", alt: "SIEM Project Gallery 02" },
+	{ src: "/images/gallery/gallery-new-03.jpg", alt: "SIEM Project Gallery 03" },
+	{ src: "/images/gallery/gallery-new-04.jpg", alt: "SIEM Project Gallery 04" },
+	{ src: "/images/gallery/gallery-new-05.jpg", alt: "SIEM Project Gallery 05" },
+	{ src: "/images/gallery/gallery-new-06.jpg", alt: "SIEM Project Gallery 06" },
+	{ src: "/images/gallery/gallery-new-07.jpg", alt: "SIEM Project Gallery 07" },
+	{ src: "/images/gallery/gallery-new-08.jpg", alt: "SIEM Project Gallery 08" },
+	{ src: "/images/gallery/gallery-new-09.jpg", alt: "SIEM Project Gallery 09" },
+	{ src: "/images/gallery/gallery-new-10.jpg", alt: "SIEM Project Gallery 10" },
+	{ src: "/images/gallery/gallery-new-11.jpeg", alt: "SIEM Project Gallery 11" },
+	{ src: "/images/gallery/gallery-new-12.jpeg", alt: "SIEM Project Gallery 12" },
+	{ src: "/images/gallery/gallery-new-13.jpeg", alt: "SIEM Project Gallery 13" },
 ];
 
 export default function Gallery() {
