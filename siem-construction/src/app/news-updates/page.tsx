@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
+	alternates: { canonical: "/news-updates" },
 	title: "News & Updates | SIEM",
 	description: "Latest news and project updates from SIEM Sri Lanka.",
 };

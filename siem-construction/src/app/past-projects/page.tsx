@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
+	alternates: { canonical: "/past-projects" },
 	title: "Past Projects | SIEM",
 	description:
 		"A selection of past construction projects by SIEM (Pvt) Ltd across Sri Lanka.",

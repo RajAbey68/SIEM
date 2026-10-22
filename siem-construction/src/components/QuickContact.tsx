@@ -1,13 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { sendEnquiry } from "@/lib/enquiry";
 
 export default function QuickContact() {
-	const [status, setStatus] = useState<"idle" | "sent">("idle");
+	const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		setStatus("sent");
+		const form = e.currentTarget;
+		const data = new FormData(form);
+		setStatus("submitting");
+		try {
+			await sendEnquiry({
+				name: String(data.get("qc-name") ?? ""),
+				email: String(data.get("qc-email") ?? ""),
+				subject: String(data.get("qc-subject") ?? "") || undefined,
+				message: String(data.get("qc-message") ?? ""),
+			});
+			setStatus("sent");
+			form.reset();
+		} catch {
+			setStatus("error");
+		}
 	};
 
 	return (
@@ -54,10 +69,32 @@ export default function QuickContact() {
 						}}
 					>
 						✓ Message sent! We&apos;ll be in touch soon.
-					</p>
-				</div>
-			) : (
-				<form
+						</p>
+						</div>
+						) : status === "error" ? (
+						<div
+						style={{
+						background: "#fdecea",
+						border: "1px solid #d93025",
+						borderRadius: "3px",
+						padding: "1rem",
+						textAlign: "center",
+						}}
+						>
+						<p
+						style={{
+							fontFamily: "var(--font-ui)",
+							fontSize: "0.85rem",
+							color: "#d93025",
+							margin: 0,
+							fontWeight: 600,
+						}}
+						>
+						Sorry — we couldn&apos;t send that. Please email info@siem.lk directly.
+						</p>
+						</div>
+						) : (
+						<form
 					onSubmit={handleSubmit}
 					style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}
 				>
@@ -171,7 +208,7 @@ export default function QuickContact() {
 						}
 						onMouseLeave={(e) => (e.currentTarget.style.background = "#222")}
 					>
-						Submit
+						{status === "submitting" ? "Sending..." : "Submit"}
 					</button>
 				</form>
 			)}

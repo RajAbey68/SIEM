@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
+	alternates: { canonical: "/careers" },
 	title: "Careers | SIEM",
 	description:
 		"Join the SIEM team. Explore career opportunities in Sri Lanka's leading construction firm.",

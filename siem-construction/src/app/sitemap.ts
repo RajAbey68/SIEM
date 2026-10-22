@@ -2,64 +2,66 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
+// trailingSlash: true in next.config.ts — every canonical URL is emitted with a
+// trailing slash, so the sitemap must match or the two disagree.
 export default function sitemap(): MetadataRoute.Sitemap {
 	return [
 		{
-			url: "https://siem.lk",
+			url: "https://siem.lk/",
 			lastModified: new Date(),
 			changeFrequency: "monthly",
 			priority: 1,
 		},
 		{
-			url: "https://siem.lk/about-us",
+			url: "https://siem.lk/about-us/",
 			lastModified: new Date(),
 			changeFrequency: "yearly",
 			priority: 0.8,
 		},
 		{
-			url: "https://siem.lk/services",
+			url: "https://siem.lk/services/",
 			lastModified: new Date(),
 			changeFrequency: "monthly",
 			priority: 0.9,
 		},
 		{
-			url: "https://siem.lk/past-projects",
+			url: "https://siem.lk/past-projects/",
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 1,
 		},
 		{
-			url: "https://siem.lk/csr-sustainability",
+			url: "https://siem.lk/csr-sustainability/",
 			lastModified: new Date(),
 			changeFrequency: "yearly",
 			priority: 0.6,
 		},
 		{
-			url: "https://siem.lk/gallery",
+			url: "https://siem.lk/gallery/",
 			lastModified: new Date(),
 			changeFrequency: "monthly",
 			priority: 0.7,
 		},
 		{
-			url: "https://siem.lk/our-designs",
-			lastModified: new Date(),
-			changeFrequency: "monthly",
-			priority: 0.7,
-		},
-		{
-			url: "https://siem.lk/careers",
+			url: "https://siem.lk/careers/",
 			lastModified: new Date(),
 			changeFrequency: "monthly",
 			priority: 0.6,
 		},
 		{
-			url: "https://siem.lk/news-updates",
+			url: "https://siem.lk/news-updates/",
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 0.7,
 		},
 		{
-			url: "https://siem.lk/contact-us",
+			url: "https://siem.lk/news-updates/external-links/",
+			lastModified: new Date(),
+			changeFrequency: "yearly",
+			priority: 0.5,
+		},
+		{
+			url: "https://siem.lk/contact-us/",
 			lastModified: new Date(),
 			changeFrequency: "yearly",
 			priority: 0.8,

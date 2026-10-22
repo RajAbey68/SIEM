@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
+	alternates: { canonical: "/about-us" },
 	title: "About Us | SIEM",
 	description:
 		"Established in 1993, SIEM is one of Sri Lanka's premier civil construction firms.",

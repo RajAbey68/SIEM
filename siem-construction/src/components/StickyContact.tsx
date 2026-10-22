@@ -100,7 +100,7 @@ export default function StickyContact() {
 							+94 11 4513 327
 						</a>
 						<a
-							href="mailto:info@siem-construction.vercel.app"
+							href="mailto:info@siem.lk"
 							style={{
 								display: "flex",
 								alignItems: "center",
@@ -122,7 +122,7 @@ export default function StickyContact() {
 							}
 						>
 							<MessageSquare size={15} color="var(--teal-300)" />
-							info@siem-construction.vercel.app
+							info@siem.lk
 						</a>
 						<Link
 							href="/contact-us"

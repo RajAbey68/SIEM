@@ -4,6 +4,7 @@ import { Leaf, HardHat, Home, FileText } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = {
+	alternates: { canonical: "/csr-sustainability" },
 	title: "CSR & Sustainability | SIEM",
 	description:
 		"SIEM's commitment to corporate social responsibility and sustainable construction in Sri Lanka.",

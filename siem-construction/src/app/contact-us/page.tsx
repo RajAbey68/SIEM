@@ -3,6 +3,7 @@ import PageLayout from "@/components/PageLayout";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
+	alternates: { canonical: "/contact-us" },
 	title: "Contact Us | SIEM",
 	description:
 		"Get in touch with SIEM (Pvt) Ltd — 51/1, Gregory's Road, Colombo 07, Sri Lanka.",

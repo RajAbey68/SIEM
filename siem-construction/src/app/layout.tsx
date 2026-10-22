@@ -26,6 +26,8 @@ const outfit = Outfit({
 
 /* ── SEO metadata — verified copy only ─────────────────────── */
 export const metadata: Metadata = {
+	metadataBase: new URL("https://siem.lk"),
+	alternates: { canonical: "/" },
 	title: "SIEM (Pvt) Ltd | Sri Lanka",
 	description:
 		"SIEM is one of Sri Lanka's premier civil engineering firms. Established 1993, committed to delivering quality solutions on time. Based in Colombo.",
@@ -34,9 +36,25 @@ export const metadata: Metadata = {
 		title: "SIEM (Pvt) Ltd | Sri Lanka",
 		description:
 			"Established 1993. One of Sri Lanka's premier civil engineering firms — committed to delivering quality solutions on time.",
-		url: "https://siem-construction.vercel.app",
+		url: "https://siem.lk",
 		siteName: "SIEM",
+		locale: "en_LK",
 		type: "website",
+		images: [
+			{
+				url: "/images/New-SIEM-LoGo-Enhanced.png",
+				width: 1600,
+				height: 1280,
+				alt: "SIEM (Pvt) Ltd — civil engineering, Sri Lanka",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "SIEM (Pvt) Ltd | Sri Lanka",
+		description:
+			"Established 1993. One of Sri Lanka's premier civil engineering firms.",
+		images: ["/images/New-SIEM-LoGo-Enhanced.png"],
 	},
 };
 
@@ -45,7 +63,7 @@ const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "LocalBusiness",
 	name: "SIEM (Pvt) Ltd",
-	url: "https://siem-construction.vercel.app",
+	url: "https://siem.lk",
 	telephone: "+94718419419",
 	email: "info@siem.lk",
 	address: {

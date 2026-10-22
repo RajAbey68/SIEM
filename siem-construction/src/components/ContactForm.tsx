@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { sendEnquiry } from "@/lib/enquiry";
 
 export default function ContactForm() {
 	const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -14,11 +15,19 @@ export default function ContactForm() {
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setStatus("submitting");
-		// Simulate network request
-		setTimeout(() => {
+		try {
+			await sendEnquiry({
+				name: formData.name,
+				email: formData.email,
+				phone: formData.phone,
+				message: formData.message,
+				subject: "Enquiry from siem.lk — Send us an Enquiry form",
+			});
 			setStatus("success");
 			setFormData({ name: "", email: "", phone: "", message: "" });
-		}, 1000);
+		} catch {
+			setStatus("error");
+		}
 	};
 
 	return (
@@ -55,6 +64,20 @@ export default function ContactForm() {
 					}}
 				>
 					Thank you for your enquiry. We will get back to you shortly.
+				</div>
+			) : status === "error" ? (
+				<div
+					style={{
+						padding: "1rem",
+						background: "#fdecea",
+						color: "#d93025",
+						fontSize: "0.85rem",
+						fontFamily: "var(--font-ui)",
+						borderRadius: "2px",
+						marginBottom: "1rem",
+					}}
+				>
+					Sorry — we couldn&apos;t send that. Please email info@siem.lk directly.
 				</div>
 			) : (
 				<form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
